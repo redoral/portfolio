@@ -1,0 +1,142 @@
+@import 'anim.css';
+
+body,
+html {
+  background-color: #111;
+  color: #fefefe;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 1em;
+}
+
+h2 {
+  padding: 1.5em;
+  font-weight: 400;
+}
+
+.header-title {
+  font-size: 3em;
+  margin: 0;
+}
+
+.navbar {
+  list-style-type: none;
+  padding: 2.5em;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #111111;
+}
+
+.navbar li {
+  padding: 1.5em;
+}
+
+.navbar a,
+.navbar a:visited {
+  color: #fefefe;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #dfdfdf;
+}
+
+.hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.navbar-container {
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+}
+
+.header-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #111111;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 650px) {
+  .navbar {
+    display: none;
+  }
+
+  .hamburger-nav {
+    display: flex;
+    padding: 3em;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .hamburger-icon,
+  .hamburger-icon:visited {
+    font-size: 2em;
+    text-decoration: none;
+    color: #fefefe;
+  }
+
+  .hamburger-icon:hover {
+    color: #555;
+  }
+
+  .hamburger-wrapper {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hamburger-menu {
+    margin-top: 7em;
+    margin-right: 2em;
+    margin-left: 2em;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    background-color: #222;
+    width: 90%;
+  }
+
+  .hamburger-menu ul {
+    list-style-type: none;
+  }
+
+  .hamburger-menu li {
+    padding: 1em;
+  }
+
+  .hamburger-menu a {
+    text-decoration: none;
+    color: #fefefe;
+  }
+}
+
+#down-arrow-icon {
+  margin-top: 10px;
+  filter: invert(100%) sepia(9%) saturate(6632%) hue-rotate(288deg)
+    brightness(117%) contrast(86%);
+  animation: slidedown 2s;
+  animation-iteration-count: infinite;
+}
