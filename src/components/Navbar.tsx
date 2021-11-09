@@ -10,7 +10,7 @@ const NavbarComponent: React.FC = () => {
         <h2 id='site-logo'>RDRL ⚡</h2>
         <ul className='navbar'>
           <li>
-            <a href='#'>About</a>
+            <a href='#about-section'>About</a>
           </li>
           <li>
             <a href='#'>Projects</a>
