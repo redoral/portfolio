@@ -7,7 +7,7 @@ const NavbarComponent: React.FC = () => {
   return (
     <>
       <div className='navbar-container'>
-        <h2 id='site-logo'>RDRL</h2>
+        <h2 id='site-logo'>RDRL ⚡</h2>
         <ul className='navbar'>
           <li>
             <a href='#'>About</a>
