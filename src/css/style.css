@@ -9,9 +9,17 @@ html {
   overflow-x: hidden;
 }
 
+h1 {
+  font-weight: 500;
+}
+
 h2 {
-  padding: 1.5em;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 1.25em;
+}
+
+a {
+  color: #fdfd96;
 }
 
 .header-title {
@@ -73,13 +81,12 @@ h2 {
 }
 
 .about-container {
-  width: 100vw;
   min-height: 50vh;
   margin: 0;
   display: flex;
-  padding: 50px;
   justify-content: center;
   flex-direction: row;
+  padding: 50px;
 }
 
 .about-box {
@@ -94,6 +101,39 @@ h2 {
 
 .skill-title {
   font-weight: 700;
+}
+
+.projects-container {
+  width: 100vw;
+  min-height: 50vh;
+  background-color: #0f0f0f;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects-subcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.project-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+}
+
+.project-description {
+  max-width: 275px;
+  text-align: start;
 }
 
 #header-text {
@@ -126,6 +166,21 @@ h2 {
 
 #site-logo {
   margin-left: 20%;
+  padding: 1.5em;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+#projects-header-text {
+  margin-bottom: 0;
+}
+
+img:hover {
+  animation: imagehover 0.5s;
+  transform: translateY(-20px);
+  box-shadow: -19px 17px 0px -2px rgba(34, 34, 34, 1);
+  -webkit-box-shadow: -19px 17px 0px -2px rgba(34, 34, 34, 1);
+  -moz-box-shadow: -19px 17px 0px -2px rgba(34, 34, 34, 1);
 }
 
 @media screen and (max-width: 900px) {
@@ -133,7 +188,7 @@ h2 {
     font-size: 1.5em;
   }
 
-  p {
+  .skill-text {
     font-size: 0.9em;
   }
 
@@ -204,6 +259,10 @@ h2 {
 
   .box-bg {
     max-width: 100%;
+  }
+
+  .projects-subcontainer {
+    flex-direction: column;
   }
 
   #header-text {

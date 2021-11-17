@@ -24,18 +24,18 @@ const AboutComponent: React.FC = () => {
       <div className='about-box'>
         <h1>Skills</h1>
         <p className='skill-title'>Front-end: </p>
-        <p>
+        <p className='skill-text'>
           HTML, CSS, JavaScript, TypeScript, React.js, React Native, React
           Redux, Bootstrap
         </p>
         <p className='skill-title'>Back-end: </p>
-        <p>Node.js, Express.js, PHP, NoSQL, MySQL</p>
+        <p className='skill-text'>Node.js, Express.js, PHP, NoSQL, MySQL</p>
         <p className='skill-title'>AWS: </p>
         <p>
           SAM, CloudFormation, EC2, S3, DynamoDB, RDS, CodePipeline, CloudWatch
         </p>
         <p className='skill-title'>Toolkit: </p>
-        <p>VSCode, Android Studio, Git</p>
+        <p className='skill-text'>VSCode, Android Studio, Git</p>
       </div>
     </div>
   );
