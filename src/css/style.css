@@ -58,6 +58,7 @@ h2 {
   display: flex;
   width: 100vw;
   justify-content: space-between;
+  animation: fadein 1s;
 }
 
 .header-container {
@@ -102,6 +103,7 @@ h2 {
   padding-left: 25px;
   padding-right: 25px;
   margin: 0;
+  animation: fadein 2s;
 }
 
 #header-subtext {
@@ -111,6 +113,7 @@ h2 {
   padding-right: 25px;
   text-align: center;
   color: #cecece;
+  animation: fadein 3s;
 }
 
 #down-arrow-icon {
@@ -125,7 +128,15 @@ h2 {
   margin-left: 20%;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
   .navbar {
     display: none;
   }
@@ -134,7 +145,7 @@ h2 {
     display: flex;
     padding: 3em;
     margin: 0;
-    margin-right: 2.5em;
+    margin-right: 0.5em;
     flex-direction: column;
   }
 
@@ -165,7 +176,7 @@ h2 {
     position: absolute;
     background-color: #222;
     width: 80%;
-    animation: fadein 0.5s;
+    animation: slidefromtop 0.5s;
   }
 
   .hamburger-menu ul {
@@ -194,7 +205,18 @@ h2 {
   .box-bg {
     max-width: 100%;
   }
+
+  #header-text {
+    font-size: 2em;
+  }
+
+  #header-subtext {
+    font-size: 1em;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   #site-logo {
-    margin-left: 2.5em;
+    margin-left: 0.5em;
   }
 }

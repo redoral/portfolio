@@ -10,6 +10,18 @@
   }
 }
 
+@keyframes slidefromtop {
+  from {
+    transform: translatey(-15px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
