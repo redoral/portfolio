@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutComponent: React.FC = () => {
   return (
-    <div className='about-container' id='about-section'>
+    <div className='about-container' id='about'>
       <div className='about-box box-bg'>
         <h1 className='section-title-text'>About me</h1>
         <p className='about-paragraph'>
@@ -12,7 +12,7 @@ const AboutComponent: React.FC = () => {
           Star Wars, and more...
         </p>
 
-        <p className='about-paragraph'>Current jam: </p>
+        <p className='about-paragraph'>Favorite song: </p>
         <iframe
           src='https://open.spotify.com/embed/track/3HBcQ5GenzAlBhCIgDGL3x?utm_source=generator'
           width='100%'

@@ -86,6 +86,21 @@ a {
   flex-direction: column;
 }
 
+.social-logo-container {
+  margin-top: 5px;
+}
+
+.social-logo {
+  height: 48px;
+  filter: invert(100%) sepia(14%) saturate(50%) hue-rotate(212deg)
+    brightness(116%) contrast(96%);
+  padding: 5px;
+}
+
+.section-title-text {
+  margin-bottom: 0;
+}
+
 #header-text {
   font-size: 3em;
   font-weight: 500;
@@ -119,10 +134,6 @@ a {
   padding: 1.5em;
   font-size: 1.5em;
   font-weight: 400;
-}
-
-.section-title-text {
-  margin-bottom: 0;
 }
 
 /** 
@@ -234,7 +245,6 @@ a {
   background-color: #efefef;
   border-radius: 5px;
   border: 0;
-  resize: none;
 }
 
 .email-subject-input:focus {
@@ -245,10 +255,11 @@ a {
   padding: 10px;
   margin-top: 10px;
   width: 300px;
-  height: 100px;
+  height: 75px;
   background-color: #efefef;
   border-radius: 5px;
   border: 0;
+  resize: none;
 }
 
 .email-body-input:focus {
@@ -312,11 +323,6 @@ a {
     flex-direction: column;
   }
 
-  .contact-box {
-    display: flex;
-    flex-direction: column;
-  }
-
   .email-subject-input,
   .email-body-input {
     width: 95%;
@@ -325,6 +331,10 @@ a {
   .google-maps-embed {
     max-height: 300px;
     width: 700px;
+  }
+
+  .social-logo {
+    height: 38px;
   }
 
   #site-logo {
@@ -337,6 +347,11 @@ a {
 
   #header-subtext {
     font-size: 0.9em;
+  }
+
+  #down-arrow-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -355,7 +370,7 @@ a {
   }
 }
 
-/** 600px **/
+/** 700px **/
 @media screen and (max-width: 700px) {
   .navbar {
     display: none;
@@ -440,12 +455,16 @@ a {
   }
 
   .project-description {
-    font-size: 1em;
+    font-size: 0.9em;
     max-width: 275px;
   }
 
   .google-maps-embed {
     max-width: 400px;
+  }
+
+  .social-logo {
+    height: 32px;
   }
 
   #header-text {
@@ -456,5 +475,17 @@ a {
     font-size: 0.9em;
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  #down-arrow-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/** 475px **/
+@media screen and (max-width: 475px) {
+  .google-maps-embed {
+    max-width: 350px;
   }
 }

@@ -5,19 +5,19 @@ import w3bestiary from '../assets/w3bestiary.jpg';
 
 const ProjectsComponent: React.FC = () => {
   return (
-    <div className='projects-container'>
+    <div className='projects-container' id='projects'>
       <h1 className='section-title-text'>Projects</h1>
       <p>
         Check out more on my{' '}
         <a href='https://github.com/redoral' target='_blank'>
-          GitHub profile
+          GitHub repositories
         </a>
         .
       </p>
       <div className='projects-subcontainer'>
         <div className='project-box'>
           <h2>P3</h2>
-          <img src={p3} height='600px' className='project-img' />
+          <img src={p3} height='512px' className='project-img' />
           <p className='project-description'>
             The Serverless Training planner is a serverless mobile app that
             Revature managers can use to look at important information regarding
@@ -33,7 +33,7 @@ const ProjectsComponent: React.FC = () => {
         </div>
         <div className='project-box'>
           <h2>Chirper</h2>
-          <img src={chirper} height='600px' className='project-img' />
+          <img src={chirper} height='512px' className='project-img' />
           <p className='project-description'>
             Another serverless mobile app for a social media service. Allows
             users to register accounts with which they can post “chirps” that
@@ -48,7 +48,7 @@ const ProjectsComponent: React.FC = () => {
         </div>
         <div className='project-box'>
           <h2>Witcher 3 Bestiary (WIP)</h2>
-          <img src={w3bestiary} height='600px' className='project-img' />
+          <img src={w3bestiary} height='512px' className='project-img' />
           <p className='project-description'>
             A mobile app that shows information about monsters such as loot,
             weaknesses, etc. from the video game The Witcher 3: Wild Hunt. A
