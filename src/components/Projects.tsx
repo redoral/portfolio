@@ -17,7 +17,12 @@ const ProjectsComponent: React.FC = () => {
       <div className='projects-subcontainer'>
         <div className='project-box'>
           <h2>P3</h2>
-          <img src={p3} height='512px' className='project-img' />
+          <a
+            href='http://github.com/Perfect-Personnel-Placement/frontend'
+            target='_blank'
+          >
+            <img src={p3} height='512px' className='project-img' />
+          </a>
           <p className='project-description'>
             The Serverless Training planner is a serverless mobile app that
             Revature managers can use to look at important information regarding
@@ -33,7 +38,12 @@ const ProjectsComponent: React.FC = () => {
         </div>
         <div className='project-box'>
           <h2>Chirper</h2>
-          <img src={chirper} height='512px' className='project-img' />
+          <a
+            href='http://github.com/RevatureRobert/2106Jun07RNCN-2-p2-fe'
+            target='_blank'
+          >
+            <img src={chirper} height='512px' className='project-img' />
+          </a>
           <p className='project-description'>
             Another serverless mobile app for a social media service. Allows
             users to register accounts with which they can post “chirps” that
@@ -48,12 +58,22 @@ const ProjectsComponent: React.FC = () => {
         </div>
         <div className='project-box'>
           <h2>Witcher 3 Bestiary (WIP)</h2>
-          <img src={w3bestiary} height='512px' className='project-img' />
+          <a
+            href='https://github.com/redoral/w3-bestiary-native'
+            target='_blank'
+          >
+            <img src={w3bestiary} height='512px' className='project-img' />
+          </a>
           <p className='project-description'>
             A mobile app that shows information about monsters such as loot,
             weaknesses, etc. from the video game The Witcher 3: Wild Hunt. A
             personal project made for fun and practice. <br />
-            <a href='#'>GitHub repo</a>
+            <a
+              href='https://github.com/redoral/w3-bestiary-native'
+              target='_blank'
+            >
+              GitHub repo
+            </a>
           </p>
         </div>
       </div>
