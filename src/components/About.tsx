@@ -8,8 +8,8 @@ const AboutComponent: React.FC = () => {
         <p className='about-paragraph'>
           I am a 23-year old JavaScript developer specializing in fullstack
           applications. Graduated with a bachelor's degree in Information
-          Technology in 2020. I'm just some guy who loves video games, LOTR,
-          Star Wars, and more...
+          Technology in 2020. I'm just some guy who loves video games, books,
+          food and more...
         </p>
 
         <p className='about-paragraph'>Favorite song: </p>
