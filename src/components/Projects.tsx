@@ -4,10 +4,36 @@ import p3 from '../assets/p3.png';
 import w3bestiary from '../assets/w3bestiary.jpg';
 
 const ProjectsComponent: React.FC = () => {
+  const [isVisible, setVisible] = React.useState(false);
+  const projectsRef =
+    React.useRef() as React.MutableRefObject<HTMLInputElement>;
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(projectsRef.current);
+        }
+      });
+    });
+    observer.observe(projectsRef.current);
+    return () => observer.unobserve(projectsRef.current);
+  }, []);
+
   return (
     <div className='projects-container' id='projects'>
-      <h1 className='section-title-text'>Projects</h1>
-      <p>
+      <h1
+        className={`section-title-text fade-in-section-1s ${
+          isVisible ? 'is-visible' : ''
+        }`}
+      >
+        Projects
+      </h1>
+      <p
+        ref={projectsRef}
+        className={`fade-in-section-2s ${isVisible ? 'is-visible' : ''}`}
+      >
         Check out more on my{' '}
         <a href='https://github.com/redoral' target='_blank'>
           GitHub repositories
@@ -15,7 +41,11 @@ const ProjectsComponent: React.FC = () => {
         .
       </p>
       <div className='projects-subcontainer'>
-        <div className='project-box'>
+        <div
+          className={`project-box fade-in-section-3s ${
+            isVisible ? 'is-visible' : ''
+          }`}
+        >
           <h2>P3</h2>
           <a
             href='http://github.com/Perfect-Personnel-Placement/frontend'
@@ -36,7 +66,11 @@ const ProjectsComponent: React.FC = () => {
             </a>
           </p>
         </div>
-        <div className='project-box'>
+        <div
+          className={`project-box fade-in-section-4s ${
+            isVisible ? 'is-visible' : ''
+          }`}
+        >
           <h2>Chirper</h2>
           <a
             href='http://github.com/RevatureRobert/2106Jun07RNCN-2-p2-fe'
@@ -56,7 +90,11 @@ const ProjectsComponent: React.FC = () => {
             </a>
           </p>
         </div>
-        <div className='project-box'>
+        <div
+          className={`project-box fade-in-section-5s ${
+            isVisible ? 'is-visible' : ''
+          }`}
+        >
           <h2>Witcher 3 Bestiary (WIP)</h2>
           <a
             href='https://github.com/redoral/w3-bestiary-native'

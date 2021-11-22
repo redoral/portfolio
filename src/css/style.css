@@ -25,6 +25,65 @@ a {
   color: #fdfd96;
 }
 
+/**
+** SCROLL ANIMATIONS
+**/
+
+.fade-in-section-1s {
+  opacity: 0;
+  transform: translateY(5vh);
+  visibility: hidden;
+  transition: opacity 1000ms ease-out, transform 1000ms ease-out,
+    visibility 1000ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.fade-in-section-2s {
+  opacity: 0;
+  transform: translateY(5vh);
+  visibility: hidden;
+  transition: opacity 1500ms ease-out, transform 2000ms ease-out,
+    visibility 2000ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.fade-in-section-3s {
+  opacity: 0;
+  transform: translateY(5vh);
+  visibility: hidden;
+  transition: opacity 2000ms ease-out, transform 3000ms ease-out,
+    visibility 3000ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.fade-in-section-4s {
+  opacity: 0;
+  transform: translateY(5vh);
+  visibility: hidden;
+  transition: opacity 2500ms ease-out, transform 4000ms ease-out,
+    visibility 4000ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.fade-in-section-5s {
+  opacity: 0;
+  transform: translateY(5vh);
+  visibility: hidden;
+  transition: opacity 3000ms ease-out, transform 5000ms ease-out,
+    visibility 5000ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.fade-in-section-1s.is-visible,
+.fade-in-section-2s.is-visible,
+.fade-in-section-3s.is-visible,
+.fade-in-section-4s.is-visible,
+.fade-in-section-5s.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
 /** 
 ** HEADER 
 **/
@@ -72,7 +131,6 @@ a {
   display: flex;
   width: 100vw;
   justify-content: space-between;
-  animation: fadein 1s;
 }
 
 .header-container {
@@ -134,6 +192,7 @@ a {
   padding: 1.5em;
   font-size: 1.5em;
   font-weight: 400;
+  animation: fadein 2s;
 }
 
 /** 

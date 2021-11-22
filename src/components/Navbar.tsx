@@ -2,13 +2,35 @@ import React from 'react';
 import HamburgerComponent from './Hamburger';
 
 const NavbarComponent: React.FC = () => {
-  const [visible, setVisible] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+  const [isVisible, setVisible] = React.useState(false);
+
+  const navbarRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(navbarRef.current);
+        }
+      });
+    });
+    observer.observe(navbarRef.current);
+    return () => observer.unobserve(navbarRef.current);
+  }, []);
 
   return (
     <>
       <div className='navbar-container'>
-        <h2 id='site-logo'>RDRL ⚡</h2>
-        <ul className='navbar'>
+        <h2 ref={navbarRef} id='site-logo'>
+          RDRL ⚡
+        </h2>
+        <ul
+          className={`navbar fade-in-section-2s ${
+            isVisible ? 'is-visible' : ''
+          }`}
+        >
           <li>
             <a href='#about'>About</a>
           </li>
@@ -19,17 +41,21 @@ const NavbarComponent: React.FC = () => {
             <a href='#contact'>Contact</a>
           </li>
         </ul>
-        <div className='hamburger-nav'>
+        <div
+          className={`hamburger-nav fade-in-section-2s ${
+            isVisible ? 'is-visible' : ''
+          }`}
+        >
           <a
             href='#'
             className='hamburger-icon'
-            onClick={() => (!visible ? setVisible(true) : setVisible(false))}
+            onClick={() => (!open ? setOpen(true) : setOpen(false))}
           >
             ≡
           </a>
         </div>
       </div>
-      <HamburgerComponent visible={visible} setVisible={setVisible} />
+      <HamburgerComponent open={open} setOpen={setOpen} />
     </>
   );
 };

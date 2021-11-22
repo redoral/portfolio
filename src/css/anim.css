@@ -22,6 +22,18 @@
   }
 }
 
+@keyframes slidefrombottom {
+  from {
+    transform: translatey(15px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+}
+
 @keyframes imagehover {
   from {
     transform: translatey(0px);

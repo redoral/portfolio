@@ -1,12 +1,12 @@
 import React from 'react';
 
 interface IProps {
-  visible: boolean;
-  setVisible: any;
+  open: boolean;
+  setOpen: any;
 }
 
 const HamburgerComponent: React.FC<IProps> = (props: IProps) => {
-  if (props.visible) {
+  if (props.open) {
     return (
       <div className='hamburger-wrapper'>
         <div className='hamburger-menu'>

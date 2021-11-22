@@ -1,11 +1,31 @@
 import React from 'react';
 
 const AboutComponent: React.FC = () => {
+  const [isVisible, setVisible] = React.useState(false);
+  const aboutRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(aboutRef.current);
+        }
+      });
+    });
+    observer.observe(aboutRef.current);
+    return () => observer.unobserve(aboutRef.current);
+  }, []);
+
   return (
     <div className='about-container' id='about'>
-      <div className='about-box box-bg'>
+      <div
+        className={`about-box box-bg fade-in-section-1s ${
+          isVisible ? 'is-visible' : ''
+        }`}
+      >
         <h1 className='section-title-text'>About me</h1>
-        <p className='about-paragraph'>
+        <p className='about-paragraph' ref={aboutRef}>
           I am a 23-year old JavaScript developer specializing in fullstack
           applications. Graduated with a bachelor's degree in Information
           Technology in 2020. I'm just some guy who loves video games, books,
@@ -21,7 +41,11 @@ const AboutComponent: React.FC = () => {
           allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
         ></iframe>
       </div>
-      <div className='about-box'>
+      <div
+        className={`about-box fade-in-section-2s ${
+          isVisible ? 'is-visible' : ''
+        }`}
+      >
         <h1 className='section-title-text'>Skills</h1>
         <p className='skill-title'>Front-end: </p>
         <p className='skill-text'>
