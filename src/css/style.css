@@ -466,9 +466,8 @@ a {
 
   .hamburger-wrapper {
     width: 100vw;
-    max-width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
   }
 
   .hamburger-menu {
@@ -479,7 +478,7 @@ a {
     display: block;
     position: absolute;
     background-color: #222;
-    width: 80%;
+    width: 30%;
     animation: slidefromtop 0.5s;
   }
 
