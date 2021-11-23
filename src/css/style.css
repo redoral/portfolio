@@ -479,11 +479,12 @@ a {
     margin-right: 3em;
     margin-left: 3em;
     border-radius: 10px;
-    display: block;
+    display: flex;
     position: absolute;
     background-color: #222;
     width: 30%;
     z-index: 100;
+    justify-content: start;
     animation: slidefromtop 0.5s;
   }
 
@@ -492,12 +493,13 @@ a {
   }
 
   .hamburger-menu li {
-    padding: 1em;
+    padding: 1em 0.5em 1em 0.5em;
   }
 
   .hamburger-menu a {
     text-decoration: none;
     color: #fefefe;
+    font-size: 2vh;
   }
 
   .about-container {
