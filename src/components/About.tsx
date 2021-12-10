@@ -32,7 +32,7 @@ const AboutComponent: React.FC = () => {
           food and more...
         </p>
 
-        <p className='about-paragraph'>Favorite song: </p>
+        <p className='about-paragraph'>My personal favorite:</p>
         <iframe
           src='https://open.spotify.com/embed/track/3HBcQ5GenzAlBhCIgDGL3x?utm_source=generator'
           width='100%'
