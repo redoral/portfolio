@@ -25,65 +25,6 @@ a {
   color: #fdfd96;
 }
 
-/**
-** SCROLL ANIMATIONS
-**/
-
-.fade-in-section-1s {
-  opacity: 0;
-  transform: translateY(5vh);
-  visibility: hidden;
-  transition: opacity 1000ms ease-out, transform 1000ms ease-out,
-    visibility 1000ms ease-out;
-  will-change: opacity, transform, visibility;
-}
-
-.fade-in-section-2s {
-  opacity: 0;
-  transform: translateY(5vh);
-  visibility: hidden;
-  transition: opacity 1500ms ease-out, transform 2000ms ease-out,
-    visibility 2000ms ease-out;
-  will-change: opacity, transform, visibility;
-}
-
-.fade-in-section-3s {
-  opacity: 0;
-  transform: translateY(5vh);
-  visibility: hidden;
-  transition: opacity 2000ms ease-out, transform 3000ms ease-out,
-    visibility 3000ms ease-out;
-  will-change: opacity, transform, visibility;
-}
-
-.fade-in-section-4s {
-  opacity: 0;
-  transform: translateY(5vh);
-  visibility: hidden;
-  transition: opacity 2500ms ease-out, transform 4000ms ease-out,
-    visibility 4000ms ease-out;
-  will-change: opacity, transform, visibility;
-}
-
-.fade-in-section-5s {
-  opacity: 0;
-  transform: translateY(5vh);
-  visibility: hidden;
-  transition: opacity 3000ms ease-out, transform 5000ms ease-out,
-    visibility 5000ms ease-out;
-  will-change: opacity, transform, visibility;
-}
-
-.fade-in-section-1s.is-visible,
-.fade-in-section-2s.is-visible,
-.fade-in-section-3s.is-visible,
-.fade-in-section-4s.is-visible,
-.fade-in-section-5s.is-visible {
-  opacity: 1;
-  transform: none;
-  visibility: visible;
-}
-
 /** 
 ** HEADER 
 **/
@@ -100,7 +41,7 @@ a {
   display: flex;
   flex-direction: row;
   float: right;
-  background-color: #0f0f0f;
+  background-color: transparent;
 }
 
 .navbar li {
@@ -144,7 +85,7 @@ a {
 .header-container {
   width: 100vw;
   height: 100vh;
-  background-color: #0f0f0f;
+  background-color: #060606;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -207,6 +148,9 @@ a {
   justify-content: center;
   flex-direction: row;
   padding: 50px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://thumbs.gfycat.com/AnchoredShoddyHarborseal-size_restricted.gif');
+  background-repeat: repeat;
 }
 
 .about-box {
@@ -216,7 +160,10 @@ a {
 }
 
 .box-bg {
-  background-color: #0f0f0f;
+  background-color: #060606;
+  box-shadow: -19px 17px 0px -2px rgba(14, 14, 14, 1);
+  -webkit-box-shadow: -19px 17px 0px -2px rgba(14, 14, 14, 1);
+  -moz-box-shadow: -19px 17px 0px -2px rgba(14, 14, 14, 1);
 }
 
 .skill-title {
@@ -230,7 +177,7 @@ a {
 .projects-container {
   width: 100vw;
   min-height: 50vh;
-  background-color: #0f0f0f;
+  background-color: #060606;
   margin: 0;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -268,9 +215,9 @@ a {
   cursor: pointer;
   animation: imagehover 0.5s;
   transform: translateY(-20px);
-  box-shadow: -19px 17px 0px -2px rgba(34, 34, 34, 1);
-  -webkit-box-shadow: -19px 17px 0px -2px rgba(34, 34, 34, 1);
-  -moz-box-shadow: -19px 17px 0px -2px rgba(34, 34, 34, 1);
+  box-shadow: -19px 17px 0px -2px rgba(14, 14, 14, 1);
+  -webkit-box-shadow: -19px 17px 0px -2px rgba(14, 14, 14, 1);
+  -moz-box-shadow: -19px 17px 0px -2px rgba(14, 14, 14, 1);
 }
 
 /** 
@@ -284,7 +231,7 @@ a {
   width: 100vw;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #0f0f0f;
+  background-color: #060606;
 }
 
 .contact-subcontainer {
@@ -295,7 +242,7 @@ a {
 
 .contact-box {
   min-height: 400px;
-  background-color: #181818;
+  background-color: #0e0e0e;
   padding: 25px;
   border-radius: 0px 15px 15px 0px;
 }
@@ -494,7 +441,7 @@ a {
     border-radius: 10px;
     display: flex;
     position: absolute;
-    background-color: #222;
+    background-color: #0e0e0e;
     width: 90%;
     z-index: 100;
     justify-content: start;
