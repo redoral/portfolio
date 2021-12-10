@@ -1,5 +1,6 @@
 import React from 'react';
 import HamburgerComponent from './Hamburger';
+import logo from '../assets/logo.png';
 
 const NavbarComponent: React.FC = () => {
   const [open, setOpen] = React.useState(false);
@@ -22,10 +23,8 @@ const NavbarComponent: React.FC = () => {
 
   return (
     <>
-      <div className='navbar-container'>
-        <h2 ref={navbarRef} id='site-logo'>
-          RDRL ⚡
-        </h2>
+      <div className='navbar-container' ref={navbarRef}>
+        <img src={logo} className='site-logo' />
         <ul
           className={`navbar fade-in-section-2s ${
             isVisible ? 'is-visible' : ''

@@ -118,6 +118,14 @@ a {
   color: #dfdfdf;
 }
 
+.site-logo {
+  width: 54px;
+  height: 54px;
+  margin-left: 20%;
+  padding: 2.5em;
+  animation: fadein 2s;
+}
+
 .hamburger-nav {
   display: none;
 }
@@ -188,15 +196,6 @@ a {
   animation: slidedown 2s;
   animation-iteration-count: infinite;
 }
-
-#site-logo {
-  margin-left: 20%;
-  padding: 1.5em;
-  font-size: 1.5em;
-  font-weight: 400;
-  animation: fadein 2s;
-}
-
 /** 
 ** ABOUT
 **/
@@ -412,7 +411,7 @@ a {
     height: 38px;
   }
 
-  #site-logo {
+  .site-logo {
     margin-left: 0.5em;
   }
 
@@ -554,6 +553,11 @@ a {
 
   .social-logo {
     height: 32px;
+  }
+
+  .site-logo {
+    width: 48px;
+    height: 48px;
   }
 
   #header-text {
