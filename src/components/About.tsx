@@ -1,8 +1,16 @@
+import axios from 'axios';
 import React from 'react';
 
 const AboutComponent: React.FC = () => {
   const [isVisible, setVisible] = React.useState(false);
   const aboutRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
+  const [currentTrack, setCurrentTrack] = React.useState({
+    status: 'Recently played:',
+    songId: '',
+  });
+
+  const token =
+    'BQC7glzbOX2xFljO5zFzy0BoBp5buJeX7TELLi8hdpl80BWyuv8eXZPgbGlDib4Wk7lzCjcaujAPTR_KAEGOk4uKL0KVlzsL7q5idBQ6JI2infsdVyMZCWnEEeet3wR_8pJljk57ITaJMBs4gIj9sxRmaVtOPNWlcE7_uFzAams';
 
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -14,8 +22,45 @@ const AboutComponent: React.FC = () => {
       });
     });
     observer.observe(aboutRef.current);
-    return () => observer.unobserve(aboutRef.current);
+
+    getCurrentTrack();
+    return () => {
+      observer.unobserve(aboutRef.current);
+      setCurrentTrack({ status: '', songId: '' });
+    };
   }, []);
+
+  const getCurrentTrack = async () => {
+    const nowPlaying = await axios.get(
+      'https://api.spotify.com/v1/me/player/currently-playing',
+      {
+        headers: {
+          Authorization: 'Bearer ' + token,
+        },
+      }
+    );
+
+    if (nowPlaying.status === 200) {
+      setCurrentTrack({
+        status: 'Now playing:',
+        songId: nowPlaying.data.item.uri.slice(14),
+      });
+    } else {
+      const recentlyPlayed = await axios.get(
+        `https://api.spotify.com/v1/me/player/recently-played`,
+        {
+          headers: {
+            Authorization: 'Bearer ' + token,
+          },
+        }
+      );
+
+      setCurrentTrack({
+        status: 'Recently played:',
+        songId: recentlyPlayed.data.item.uri.slice(14),
+      });
+    }
+  };
 
   return (
     <div className='about-container' id='about'>
@@ -32,9 +77,9 @@ const AboutComponent: React.FC = () => {
           food and more...
         </p>
 
-        <p className='about-paragraph'>My personal favorite:</p>
+        <p className='about-paragraph'>{currentTrack.status}</p>
         <iframe
-          src='https://open.spotify.com/embed/track/3HBcQ5GenzAlBhCIgDGL3x?utm_source=generator'
+          src={`https://open.spotify.com/embed/track/` + currentTrack.songId}
           width='100%'
           height='380'
           frameBorder='0'
