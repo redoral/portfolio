@@ -47,7 +47,7 @@ const AboutComponent: React.FC = () => {
       });
     } else {
       const recentlyPlayed = await axios.get(
-        `https://api.spotify.com/v1/me/player/recently-played`,
+        `https://api.spotify.com/v1/me/player/recently-played?limit=1&before=${Date.now().toString()}`,
         {
           headers: {
             Authorization: 'Bearer ' + token,
@@ -57,7 +57,7 @@ const AboutComponent: React.FC = () => {
 
       setCurrentTrack({
         status: 'Recently played:',
-        songId: recentlyPlayed.data.item.uri.slice(14),
+        songId: recentlyPlayed.data.items[0].track.uri.slice(14),
       });
     }
   };
