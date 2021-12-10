@@ -307,6 +307,15 @@ a {
   -moz-box-shadow: -6px 12px 0px 0px rgba(253, 253, 150, 0.75);
 }
 
+.me-img {
+  background: url('../assets/me.jpg');
+  background-size: cover;
+  background-position-y: -125px;
+  background-position-x: right;
+  border-radius: 15px 0 0 15px;
+  width: 600px;
+}
+
 /**
 ** MEDIA QUERIES
 ** /
@@ -342,6 +351,13 @@ a {
 
   .contact-box {
     border-radius: 0px 0px 15px 15px;
+  }
+
+  .me-img {
+    width: 600px;
+    height: 300px;
+    border-radius: 15px 15px 0 0;
+    background-position-y: -220px;
   }
 
   .email-subject-input,
@@ -494,8 +510,11 @@ a {
     max-width: 275px;
   }
 
-  .google-maps-embed {
-    max-width: 400px;
+  .me-img {
+    width: 400px;
+    height: 200px;
+    border-radius: 15px 15px 0 0;
+    background-position-y: -150px;
   }
 
   .social-logo {
@@ -505,6 +524,12 @@ a {
   .site-logo {
     width: 48px;
     height: 48px;
+  }
+
+  .box-bg {
+    box-shadow: -10px 10px 0px -2px rgba(14, 14, 14, 1);
+    -webkit-box-shadow: -10px 10px 0px -2px rgba(14, 14, 14, 1);
+    -moz-box-shadow: -10px 10px 0px -2px rgba(14, 14, 14, 1);
   }
 
   #header-text {
@@ -525,7 +550,7 @@ a {
 
 /** 475px **/
 @media screen and (max-width: 475px) {
-  .google-maps-embed {
+  .me-img {
     max-width: 350px;
   }
 }
