@@ -9,9 +9,6 @@ const AboutComponent: React.FC = () => {
     songId: '',
   });
 
-  const token =
-    'BQC7glzbOX2xFljO5zFzy0BoBp5buJeX7TELLi8hdpl80BWyuv8eXZPgbGlDib4Wk7lzCjcaujAPTR_KAEGOk4uKL0KVlzsL7q5idBQ6JI2infsdVyMZCWnEEeet3wR_8pJljk57ITaJMBs4gIj9sxRmaVtOPNWlcE7_uFzAams';
-
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -35,7 +32,7 @@ const AboutComponent: React.FC = () => {
       'https://api.spotify.com/v1/me/player/currently-playing',
       {
         headers: {
-          Authorization: 'Bearer ' + token,
+          Authorization: 'Bearer ' + process.env.REACT_APP_TOKEN,
         },
       }
     );
@@ -50,7 +47,7 @@ const AboutComponent: React.FC = () => {
         `https://api.spotify.com/v1/me/player/recently-played?limit=1&before=${Date.now().toString()}`,
         {
           headers: {
-            Authorization: 'Bearer ' + token,
+            Authorization: 'Bearer ' + process.env.REACT_APP_TOKEN,
           },
         }
       );
