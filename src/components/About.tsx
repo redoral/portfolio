@@ -1,13 +1,8 @@
-import axios from 'axios';
 import React from 'react';
 
 const AboutComponent: React.FC = () => {
   const [isVisible, setVisible] = React.useState(false);
   const aboutRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
-  const [currentTrack, setCurrentTrack] = React.useState({
-    status: 'Recently played:',
-    songId: '',
-  });
 
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -20,44 +15,10 @@ const AboutComponent: React.FC = () => {
     });
     observer.observe(aboutRef.current);
 
-    getCurrentTrack();
     return () => {
       observer.unobserve(aboutRef.current);
-      setCurrentTrack({ status: '', songId: '' });
     };
   }, []);
-
-  const getCurrentTrack = async () => {
-    const nowPlaying = await axios.get(
-      'https://api.spotify.com/v1/me/player/currently-playing',
-      {
-        headers: {
-          Authorization: 'Bearer ' + process.env.REACT_APP_TOKEN,
-        },
-      }
-    );
-
-    if (nowPlaying.status === 200) {
-      setCurrentTrack({
-        status: 'Now playing:',
-        songId: nowPlaying.data.item.uri.slice(14),
-      });
-    } else {
-      const recentlyPlayed = await axios.get(
-        `https://api.spotify.com/v1/me/player/recently-played?limit=1&before=${Date.now().toString()}`,
-        {
-          headers: {
-            Authorization: 'Bearer ' + process.env.REACT_APP_TOKEN,
-          },
-        }
-      );
-
-      setCurrentTrack({
-        status: 'Recently played:',
-        songId: recentlyPlayed.data.items[0].track.uri.slice(14),
-      });
-    }
-  };
 
   return (
     <div className='about-container' id='about'>
@@ -74,9 +35,9 @@ const AboutComponent: React.FC = () => {
           food and more...
         </p>
 
-        <p className='about-paragraph'>{currentTrack.status}</p>
+        <p className='about-paragraph'>Current jam: </p>
         <iframe
-          src={`https://open.spotify.com/embed/track/` + currentTrack.songId}
+          src={`https://open.spotify.com/embed/track/4RX354bOkvKHHiC4u4tWpb`}
           width='100%'
           height='380'
           frameBorder='0'
