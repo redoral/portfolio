@@ -1,6 +1,6 @@
 import React from 'react';
 import HamburgerComponent from './Hamburger';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.svg';
 
 const NavbarComponent: React.FC = () => {
   const [open, setOpen] = React.useState(false);

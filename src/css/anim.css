@@ -134,3 +134,15 @@
     opacity: 1;
   }
 }
+
+@keyframes buttonHover {
+  from {
+    background: none;
+    color: #fff;
+  }
+
+  to {
+    background-color: #fafafa;
+    color: #060606;
+  }
+}

@@ -28,7 +28,7 @@ const HeaderComponent: React.FC = () => {
         className={`fade-in-section-2s ${isVisible ? 'is-visible' : ''}`}
         ref={headerRef}
       >
-        Hi, I'm Red! ✌️
+        Hi, I'm Red!
       </h1>
       <p
         id='header-subtext'
@@ -50,7 +50,7 @@ const HeaderComponent: React.FC = () => {
         </a>
       </div>
       <span className={`fade-in-section-5s ${isVisible ? 'is-visible' : ''}`}>
-        <img src={DownArrowIcon} width='50' height='50' id='down-arrow-icon' />
+        <img src={DownArrowIcon} width='74' height='74' id='down-arrow-icon' />
       </span>
     </div>
   );
