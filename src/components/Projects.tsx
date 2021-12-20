@@ -3,10 +3,13 @@ import p3bg from '../assets/p3-bg.png';
 import chirperbg from '../assets/chirper-bg.png';
 import w3bestiarybg from '../assets/w3bestiary-bg.png';
 import github from '../assets/github.svg';
+import leftArrow from '../assets/arrow-left.svg';
+import rightArrow from '../assets/arrow-right.svg';
 
 const ProjectsComponent: React.FC = () => {
   /** States and ref */
   const [isVisible, setVisible] = React.useState(false);
+  const [fadeStyle, setFadeStyle] = React.useState(1);
   const projectsRef =
     React.useRef() as React.MutableRefObject<HTMLInputElement>;
 
@@ -49,19 +52,39 @@ const ProjectsComponent: React.FC = () => {
 
   /** Function to show the next project */
   const nextProject = () => {
+    setFadeStyle(0);
+
     if (currentProject >= 0 && currentProject < 2) {
-      setCurrentProject(currentProject + 1);
+      setTimeout(() => {
+        setCurrentProject(currentProject + 1);
+        setFadeStyle(1);
+      }, 200);
     } else if (currentProject === 2) {
-      setCurrentProject(0);
+      setTimeout(() => {
+        setCurrentProject(0);
+        setFadeStyle(1);
+      }, 200);
+    } else {
+      setFadeStyle(1);
     }
   };
 
   /** Function to show the previous project */
   const prevProject = () => {
+    setFadeStyle(0);
+
     if (currentProject > 0 && currentProject <= 2) {
-      setCurrentProject(currentProject - 1);
+      setTimeout(() => {
+        setCurrentProject(currentProject - 1);
+        setFadeStyle(1);
+      }, 200);
     } else if (currentProject === 0) {
-      setCurrentProject(2);
+      setTimeout(() => {
+        setCurrentProject(2);
+        setFadeStyle(1);
+      }, 200);
+    } else {
+      setFadeStyle(1);
     }
   };
 
@@ -88,26 +111,49 @@ const ProjectsComponent: React.FC = () => {
       </p>
       <div className='projects-subcontainer'>
         <div className='project-info'>
-          <h2 className='project-name'>
+          <h2
+            className='project-name'
+            style={{
+              opacity: fadeStyle,
+              transition: 'opacity 0.2s ease-in-out',
+            }}
+          >
             {projects[currentProject].name}{' '}
             <img src={github} className='project-link-logo' />
           </h2>
-          <p className='project-description'>{projects[currentProject].desc}</p>
-          <p className='project-technologies'>
+          <p
+            className='project-description'
+            style={{
+              opacity: fadeStyle,
+              transition: 'opacity 0.2s ease-in-out',
+            }}
+          >
+            {projects[currentProject].desc}
+          </p>
+          <p
+            className='project-technologies'
+            style={{
+              opacity: fadeStyle,
+              transition: 'opacity 0.2s ease-in-out',
+            }}
+          >
             Technologies: TypeScript, React Native, React Redux, Expo
           </p>
           <div className='arrow-btns'>
             <span onClick={prevProject} className='next-proj-btn'>
-              Prev project
+              <img src={leftArrow} className='arrow-icon' />
             </span>
             <span onClick={nextProject} className='next-proj-btn'>
-              Next project
+              <img src={rightArrow} className='arrow-icon' />
             </span>
           </div>
         </div>
         <div
-          className='project-img'
-          style={{ backgroundImage: `url(${projects[currentProject].img})` }}
+          className={`project-img`}
+          style={{
+            backgroundImage: `url(${projects[currentProject].img})`,
+            opacity: fadeStyle,
+          }}
         ></div>
       </div>
     </div>
