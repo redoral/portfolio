@@ -2,12 +2,15 @@ import React from 'react';
 import p3bg from '../assets/p3-bg.png';
 import chirperbg from '../assets/chirper-bg.png';
 import w3bestiarybg from '../assets/w3bestiary-bg.png';
+import github from '../assets/github.svg';
 
 const ProjectsComponent: React.FC = () => {
+  /** States and ref */
   const [isVisible, setVisible] = React.useState(false);
   const projectsRef =
     React.useRef() as React.MutableRefObject<HTMLInputElement>;
 
+  /** List of projects */
   const [currentProject, setCurrentProject] = React.useState(0);
   const projects = [
     {
@@ -27,6 +30,7 @@ const ProjectsComponent: React.FC = () => {
     },
   ];
 
+  /** Checks if component is in view for transition */
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -43,11 +47,21 @@ const ProjectsComponent: React.FC = () => {
     };
   }, []);
 
+  /** Function to show the next project */
   const nextProject = () => {
     if (currentProject >= 0 && currentProject < 2) {
       setCurrentProject(currentProject + 1);
     } else if (currentProject === 2) {
       setCurrentProject(0);
+    }
+  };
+
+  /** Function to show the previous project */
+  const prevProject = () => {
+    if (currentProject > 0 && currentProject <= 2) {
+      setCurrentProject(currentProject - 1);
+    } else if (currentProject === 0) {
+      setCurrentProject(2);
     }
   };
 
@@ -74,14 +88,22 @@ const ProjectsComponent: React.FC = () => {
       </p>
       <div className='projects-subcontainer'>
         <div className='project-info'>
-          <h2 className='project-name'>{projects[currentProject].name}</h2>
+          <h2 className='project-name'>
+            {projects[currentProject].name}{' '}
+            <img src={github} className='project-link-logo' />
+          </h2>
           <p className='project-description'>{projects[currentProject].desc}</p>
           <p className='project-technologies'>
             Technologies: TypeScript, React Native, React Redux, Expo
           </p>
-          <span onClick={nextProject} className='next-proj-btn'>
-            Next project
-          </span>
+          <div className='arrow-btns'>
+            <span onClick={prevProject} className='next-proj-btn'>
+              Prev project
+            </span>
+            <span onClick={nextProject} className='next-proj-btn'>
+              Next project
+            </span>
+          </div>
         </div>
         <div
           className='project-img'
