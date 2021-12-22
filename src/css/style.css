@@ -37,7 +37,7 @@ a {
   list-style-type: none;
   padding-top: 2.5em;
   margin: 0;
-  margin-right: 100px;
+  margin-right: 20vw;
   display: flex;
   flex-direction: row;
   float: right;
@@ -62,7 +62,7 @@ a {
 .site-logo {
   width: 54px;
   height: 54px;
-  margin-left: 50px;
+  margin-left: 20vw;
   padding: 2.5em;
   animation: fadein 2s;
 }
@@ -91,7 +91,8 @@ a {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding-left: 100px;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 .social-logo-container {
@@ -100,7 +101,7 @@ a {
 }
 
 .social-logo {
-  height: 74px;
+  height: 50px;
   filter: invert(100%) sepia(14%) saturate(50%) hue-rotate(212deg)
     brightness(116%) contrast(96%);
   padding: 5px;
@@ -111,7 +112,7 @@ a {
 }
 
 #header-text {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 500;
   text-align: center;
   padding-left: 25px;
@@ -122,7 +123,7 @@ a {
 
 #header-subtext {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.25em;
   padding-left: 25px;
   padding-right: 25px;
   color: #cecece;
@@ -147,16 +148,17 @@ a {
   display: flex;
   background: #090909;
   background-repeat: repeat;
-  padding: 100px;
+  padding: 5vw 20vw;
+  justify-content: center;
 }
 
 .about-me-section {
-  width: 45vw;
+  width: 50vw;
 }
 
 .about-me-text {
   font-size: 1.25em;
-  width: 50%;
+  width: 300px;
 }
 
 .dl-resume-btn {
@@ -191,7 +193,7 @@ a {
 
 .skills-section {
   min-height: 50vh;
-  padding: 25px 100px;
+  padding: 25px;
   color: #060606;
   display: flex;
   flex-direction: column;
@@ -200,7 +202,7 @@ a {
 
 .skills-box {
   background-color: #efefef;
-  padding: 25px 0px 150px 0px;
+  padding: 25px 0px 25px 0px;
   width: 400px;
   transform: rotate(8deg);
   border-radius: 15px;
@@ -241,9 +243,9 @@ a {
     rgba(31, 31, 31, 1) 100%
   );
   margin: 0;
-  padding-top: 50px;
-  padding-left: 100px;
+  padding: 5vw 0vw 0vw 20vw;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   z-index: 0;
 }
@@ -251,7 +253,6 @@ a {
 .projects-subcontainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .project-description {
@@ -272,8 +273,8 @@ a {
 }
 
 .project-info {
+  width: 300px;
   display: flex;
-  flex: 1;
   padding-top: 25px;
   padding-bottom: 50px;
   flex-direction: column;
@@ -300,7 +301,7 @@ a {
   border-radius: 15px;
   padding: 5px 10px;
   text-align: center;
-  width: 150px;
+  width: 100px;
   margin-right: 10px;
   margin-top: 25px;
   display: inline-block;
@@ -327,10 +328,9 @@ a {
 }
 
 .project-img {
-  flex: 4;
+  width: 50%;
   overflow: hidden;
   display: flex;
-  justify-content: center;
   background-position: center;
   background-position-y: top;
   background-size: cover;
@@ -345,8 +345,8 @@ a {
 }
 
 .arrow-icon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   filter: invert();
 }
 
@@ -468,7 +468,6 @@ a {
 
   .project-info {
     height: 50vh;
-    padding-bottom: px;
   }
 
   .social-logo {
@@ -476,7 +475,7 @@ a {
   }
 
   .projects-title {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   .projects-subtitle {
@@ -489,6 +488,53 @@ a {
 
   .project-description {
     font-size: 1em;
+  }
+
+  .skill-group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .skill-category {
+    padding: 0px 10px;
+    width: 50%;
+  }
+
+  .skills-box {
+    transform: rotate(10deg);
+    width: 350px;
+    -webkit-box-shadow: 15px 15px 0px 1px #aaa;
+    box-shadow: 15px 15px 0px -5px #aaa;
+  }
+
+  .skills-name {
+    font-size: 1em;
+  }
+
+  .skills-list {
+    font-size: 0.9em;
+  }
+
+  .skills-title {
+    font-size: 0.9em;
+  }
+
+  .dl-resume-btn {
+    width: 150px;
+    font-size: 0.9em;
+  }
+
+  .about-me-text {
+    font-size: 1em;
+  }
+
+  .header-container,
+  .about-container {
+    padding: 25px 25px;
+  }
+
+  .projects-container {
+    padding: 25px 25px 0px 25px;
   }
 }
 
@@ -632,26 +678,21 @@ a {
     padding: 0;
   }
 
-  .skill-group {
-    display: flex;
-    flex-direction: row;
+  .project-info {
+    width: 100%;
   }
 
-  .skill-category {
-    padding: 0px 10px;
-    width: 50%;
+  .project-name {
+    font-size: 0.9em;
   }
 
   .skills-box {
     transform: rotate(0);
     width: 100%;
-    height: 300px;
-    -webkit-box-shadow: 15px 15px 0px 1px #aaa;
-    box-shadow: 15px 15px 0px -5px #aaa;
   }
 
   .skill-text {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   .skills-list {
