@@ -60,7 +60,7 @@ const AboutComponent: React.FC = () => {
             <div className='skill-group'>
               <div className='skill-category'>
                 <p className='skill-title'>AWS: </p>
-                <p>
+                <p className='skill-text'>
                   SAM, CloudFormation, EC2, S3, DynamoDB, RDS, CodePipeline,
                   CloudWatch
                 </p>

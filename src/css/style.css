@@ -25,6 +25,10 @@ a {
   color: #d4fafa;
 }
 
+p {
+  color: #cecece;
+}
+
 /** 
 ** HEADER 
 **/
@@ -224,9 +228,11 @@ a {
   font-weight: 500;
   font-size: 1.25em;
   margin: 0;
+  color: #060606;
 }
 
 .skill-text {
+  color: #111;
   font-size: 1em;
 }
 
@@ -684,6 +690,10 @@ a {
 
   .project-name {
     font-size: 0.9em;
+  }
+
+  .projects-title {
+    font-size: 2em;
   }
 
   .skills-box {
