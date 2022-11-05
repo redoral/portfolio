@@ -27,7 +27,7 @@ const ProjectsComponent: React.FC = () => {
     },
     {
       name: 'W3 Bestiary',
-      desc: 'Another serverless mobile app for a social media service. Allows users to register accounts with which they can post “chirps” that are broadcasted to all users on the site and more.',
+      desc: 'A mobile app that serves as a player guide for the video game The Witcher 3: Wild Hunt.',
       img: w3bestiarybg,
       url: 'https://github.com/redoral/w3-bestiary-native'
     }
