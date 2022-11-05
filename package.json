@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "http://redoral.github.io/react-portfolio",
+  "homepage": "http://redoral.github.io/portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
