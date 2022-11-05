@@ -8,10 +8,7 @@ import rightArrow from '../assets/arrow-right.svg';
 
 const ProjectsComponent: React.FC = () => {
   /** States and ref */
-  const [isVisible, setVisible] = React.useState(false);
   const [fadeStyle, setFadeStyle] = React.useState(1);
-  const projectsRef =
-    React.useRef() as React.MutableRefObject<HTMLInputElement>;
 
   /** List of projects */
   const [currentProject, setCurrentProject] = React.useState(0);
@@ -20,35 +17,21 @@ const ProjectsComponent: React.FC = () => {
       name: 'P3',
       desc: 'The Serverless Training planner is a serverless mobile app that Revature managers can use to look at important information regarding clientele demands and batch output for the company.',
       img: p3bg,
+      url: 'https://github.com/redoral/p3-fe'
     },
     {
       name: 'Chirper',
       desc: 'Another serverless mobile app for a social media service. Allows users to register accounts with which they can post “chirps” that are broadcasted to all users on the site and more.',
       img: chirperbg,
+      url: 'https://github.com/redoral/chirper-native-fe'
     },
     {
       name: 'W3 Bestiary',
       desc: 'Another serverless mobile app for a social media service. Allows users to register accounts with which they can post “chirps” that are broadcasted to all users on the site and more.',
       img: w3bestiarybg,
-    },
+      url: 'https://github.com/redoral/w3-bestiary-native'
+    }
   ];
-
-  /** Checks if component is in view for transition */
-  React.useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(projectsRef.current);
-        }
-      });
-    });
-    observer.observe(projectsRef.current);
-    return () => {
-      observer.unobserve(projectsRef.current);
-      setCurrentProject(0);
-    };
-  }, []);
 
   /** Function to show the next project */
   const nextProject = () => {
@@ -90,21 +73,10 @@ const ProjectsComponent: React.FC = () => {
 
   return (
     <div className='projects-container' id='projects'>
-      <h1
-        className={`section-title-text fade-in-section-1s projects-title ${
-          isVisible ? 'is-visible' : ''
-        }`}
-      >
-        Projects
-      </h1>
-      <p
-        ref={projectsRef}
-        className={`fade-in-section-2s projects-subtitle ${
-          isVisible ? 'is-visible' : ''
-        }`}
-      >
+      <h1 className='section-title-text projects-title'>Projects</h1>
+      <p className='projects-subtitle'>
         Check out more on my{' '}
-        <a href='https://github.com/redoral' target='_blank'>
+        <a href='https://github.com/redoral' target='_blank' rel='noreferrer'>
           GitHub repositories
         </a>
         .
@@ -115,46 +87,44 @@ const ProjectsComponent: React.FC = () => {
             className='project-name'
             style={{
               opacity: fadeStyle,
-              transition: 'opacity 0.2s ease-in-out',
-            }}
-          >
+              transition: 'opacity 0.2s ease-in-out'
+            }}>
             {projects[currentProject].name}{' '}
-            <img src={github} className='project-link-logo' />
+            <a href={projects[currentProject].url} target='_blank' rel='noreferrer'>
+              <img src={github} className='project-link-logo' alt='GitHub Logo' />
+            </a>
           </h2>
           <p
             className='project-description'
             style={{
               opacity: fadeStyle,
-              transition: 'opacity 0.2s ease-in-out',
-            }}
-          >
+              transition: 'opacity 0.2s ease-in-out'
+            }}>
             {projects[currentProject].desc}
           </p>
           <p
             className='project-technologies'
             style={{
               opacity: fadeStyle,
-              transition: 'opacity 0.2s ease-in-out',
-            }}
-          >
+              transition: 'opacity 0.2s ease-in-out'
+            }}>
             Technologies: TypeScript, React Native, React Redux, Expo
           </p>
           <div className='arrow-btns'>
             <span onClick={prevProject} className='next-proj-btn'>
-              <img src={leftArrow} className='arrow-icon' />
+              <img src={leftArrow} className='arrow-icon' alt='Left Arrow Button' />
             </span>
             <span onClick={nextProject} className='next-proj-btn'>
-              <img src={rightArrow} className='arrow-icon' />
+              <img src={rightArrow} className='arrow-icon' alt='Right Arrow Button' />
             </span>
           </div>
         </div>
         <div
-          className={`project-img`}
+          className='project-img'
           style={{
             backgroundImage: `url(${projects[currentProject].img})`,
-            opacity: fadeStyle,
-          }}
-        ></div>
+            opacity: fadeStyle
+          }}></div>
       </div>
     </div>
   );

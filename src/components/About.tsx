@@ -1,44 +1,47 @@
 import React from 'react';
+import resume from '../assets/resume.pdf';
 
 const AboutComponent: React.FC = () => {
-  // const [isVisible, setVisible] = React.useState(false);
-  // const aboutRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
+  const [isVisible, setVisible] = React.useState(false);
+  const aboutRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
 
-  // React.useEffect(() => {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         setVisible(true);
-  //         observer.unobserve(aboutRef.current);
-  //       }
-  //     });
-  //   });
-  //   observer.observe(aboutRef.current);
+  React.useEffect(() => {
+    const currentAboutRef = aboutRef.current;
 
-  //   return () => {
-  //     observer.unobserve(aboutRef.current);
-  //   };
-  // }, []);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(currentAboutRef);
+        }
+      });
+    });
+    observer.observe(currentAboutRef);
+
+    return () => {
+      observer.unobserve(currentAboutRef);
+    };
+  }, []);
 
   return (
     <div className='about-container' id='about'>
-      <div className='about-me-section'>
-        <h1 className='projects-title'>About me</h1>
+      <div className={`about-me-section fade-in-section-2s ${isVisible ? 'is-visible' : ''}`}>
+        <h1 className='projects-title' ref={aboutRef}>
+          About me
+        </h1>
         <p className='about-me-text'>
-          My name's Red! I'm a 23-year old fullstack JavaScript developer who
-          graduated in 2020 with a bachelor's in Information Technology. I'm
-          just your average guy who likes video games, tv shows, movies, food,
-          and more!
+          My name's Red! I'm a 24-year old full stack developer who graduated in 2020 with a
+          bachelor's in Information Technology. I'm just your average guy who likes video games, tv
+          shows, movies, food, and more!
         </p>
 
-        <span className='dl-resume-btn'>Download resume</span>
+        <a href={resume} className='dl-resume-btn' target='_blank' rel='noreferrer'>
+          Download resume
+        </a>
       </div>
-      <div className='skills-section'>
+      <div className={`skills-section fade-in-section-3s ${isVisible ? 'is-visible' : ''} `}>
         <div className='skills-box'>
-          <h1
-            className='project-name'
-            style={{ textAlign: 'center', marginBottom: '15px' }}
-          >
+          <h1 className='project-name' style={{ textAlign: 'center', marginBottom: '15px' }}>
             Skills
           </h1>
           <div className='skills-list'>
@@ -46,14 +49,14 @@ const AboutComponent: React.FC = () => {
               <div className='skill-category'>
                 <p className='skill-title'>Front-end: </p>
                 <p className='skill-text'>
-                  HTML, CSS, JavaScript, TypeScript, React.js, React Native,
-                  React Redux, Bootstrap
+                  HTML, CSS, JavaScript, TypeScript, React.js, React Native, Redux, Less.js,
+                  Bootstrap
                 </p>
               </div>
               <div className='skill-category'>
                 <p className='skill-title'>Back-end:</p>
                 <p className='skill-text'>
-                  Node.js, Express.js, PHP, NoSQL, MySQL
+                  Node.js, Express.js, PHP, Java, Spring Boot, NoSQL, MySQL, PostgreSQL
                 </p>
               </div>
             </div>
@@ -61,13 +64,14 @@ const AboutComponent: React.FC = () => {
               <div className='skill-category'>
                 <p className='skill-title'>AWS: </p>
                 <p className='skill-text'>
-                  SAM, CloudFormation, EC2, S3, DynamoDB, RDS, CodePipeline,
-                  CloudWatch
+                  SAM, CloudFormation, EC2, S3, DynamoDB, RDS, CodePipeline, CloudWatch
                 </p>
               </div>
               <div className='skill-category'>
                 <p className='skill-title'>Toolkit: </p>
-                <p className='skill-text'>VSCode, Android Studio, Git</p>
+                <p className='skill-text'>
+                  VSCode, Android Studio, IntelliJ IDEA, Postman, Insomnia, Git
+                </p>
               </div>
             </div>
           </div>
