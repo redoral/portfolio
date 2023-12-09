@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav className='py-6 flex items-center justify-between lg:justify-start space-x-10'>
       <h1 className='text-2xl font-bold'>redoral</h1>
-      <ul className='space-x-6'>
+      <ul className='space-x-6 lg:text-base text-sm'>
         <li className='float-left'>
           <button>About</button>
         </li>
