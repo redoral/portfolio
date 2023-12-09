@@ -7,9 +7,9 @@ function About() {
         className={`w-full h-full rounded-3xl bg-cover bg-center bg-[url('/about.jpg')] flex flex-col p-12 items-center justify-center bg-no-repeat`}
       />
       <div className='col-span-2'>
-        <h1 className='font-bold text-4xl'>About</h1>
+        <h1 className='font-bold text-5xl'>A little bit about me</h1>
         <p className='my-2'>
-          Hi! My name is Red. I am an AWS Certified, Full Stack Software Engineer currently based in
+          My name is Red. I am an AWS Certified, Full Stack Software Engineer currently based in
           Spokane, WA. From web and mobile frontends to RESTful APIs and serverless backends, I am
           experienced in a magnitude of development languages, tools, and processes! And I love what
           I do.
