@@ -1,24 +1,28 @@
 import React from 'react';
+import { FaAws } from 'react-icons/fa';
 
 function About() {
   return (
     <section className='lg:py-12 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6'>
       <div
-        className={`w-full order-2 lg:order-1 lg:h-full h-96 flex rounded-3xl bg-cover bg-center bg-[url('/about.jpg')] flex-col p-12 items-center justify-center bg-no-repeat`}
+        className={`w-full order-2 lg:order-1 lg:h-full h-96 flex rounded-3xl bg-cover bg-center bg-[url('/img/about.jpeg')] flex-col p-12 items-center justify-center bg-no-repeat`}
       />
       <div className='lg:col-span-2 lg:order-2 order-1'>
         <h1 className='font-bold lg:text-5xl text-4xl'>A little bit about me</h1>
         <p className='my-2'>
           My name is Red. I am an AWS Certified, Full Stack Software Engineer currently based in
           Spokane, WA. From web and mobile frontends to RESTful APIs and serverless backends, I am
-          experienced in a magnitude of development languages, tools, and processes! And I love what
+          experienced in a magnitude of development languages, tools, and processes. And I love what
           I do.
         </p>
-        <div className='p-2 border rounded text-xs my-4'>
-          <h1 className='text-lg font-bold'>AWS Associate Developer</h1>
-          <p> Issued Apr 2023</p>
-          <p> Expires Apr 2026</p>
-          <p> Credential ID 4Y18RZF172E1QSG9</p>
+        <div className='p-2 border flex justify-between items-center gap-4 rounded text-xs my-4'>
+          <span>
+            <h1 className='text-lg font-bold'>AWS Associate Developer</h1>
+            <p> Issued Apr 2023</p>
+            <p> Expires Apr 2026</p>
+            <p> Credential ID 4Y18RZF172E1QSG9</p>
+          </span>
+          <FaAws size={32} className='mx-4' />
         </div>
         <h2 className='font-bold text-xl lg:text-2xl mb-2'>Some of the things I know</h2>
         <div className='grid grid-cols-2 gap-2 md:grid-cols-4'>

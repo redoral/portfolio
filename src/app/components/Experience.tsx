@@ -18,7 +18,7 @@ function Experience() {
           <p className='mb-4 text-sm lg:text-base font-normal text-gray-600'>
             Partnered with Avista to create a frontend for a Data Capture service used in microgrid
             simulations on their Digital Exchange Platform. Helped develop the Supplier Diversity
-            platform, which helps diversity-owned businesses to get more exposure. Worked with
+            platform, which helps diversity-owned businesses get more exposure. Worked with
             TypeScript, React, Vite, GraphQL, Apache E-charts, AWS, and more.
           </p>
         </li>

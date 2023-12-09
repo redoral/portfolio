@@ -14,8 +14,10 @@ function Projects() {
     },
     {
       name: 'Avista Supplier Diversity',
-      description: 'A serverless social media application for web and mobile.',
-      technologies: 'React, TypeScript, Vite, Apollo GraphQL, TailwindCSS, Vitest, RTL',
+      description:
+        'A platform made to help diversity-owned businesses match with other businesses to create a more inclusive economy.',
+      technologies:
+        'React, TypeScript, Vite, Apollo GraphQL, TailwindCSS, Vitest, RTL, Serverless, AWS',
       image: '/img/supplierdiversity.png',
       size: 400
     },
@@ -51,7 +53,7 @@ function Projects() {
         </div>
       </div>
       <div className='flex flex-col order-1 lg:order-2 w-full'>
-        <h1 className='font-bold text-4xl lg:text-5xl'>Projects</h1>
+        <h1 className='font-bold text-4xl lg:text-5xl'>Some of my work</h1>
         <ul className='m-4 list-disc'>
           <li
             className={`${
