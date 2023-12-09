@@ -2,12 +2,12 @@ import React from 'react';
 
 function About() {
   return (
-    <section className='py-12 grid grid-cols-3 gap-6'>
+    <section className='py-12 grid grid-cols-2 lg:grid-cols-3 gap-6'>
       <div
-        className={`w-full h-full rounded-3xl bg-cover bg-center bg-[url('/about.jpg')] flex flex-col p-12 items-center justify-center bg-no-repeat`}
+        className={`w-full h-full hidden lg:flex rounded-3xl bg-cover bg-center bg-[url('/about.jpg')]  flex-col p-12 items-center justify-center bg-no-repeat`}
       />
       <div className='col-span-2'>
-        <h1 className='font-bold text-5xl'>A little bit about me</h1>
+        <h1 className='font-bold lg:text-5xl text-4xl'>A little bit about me</h1>
         <p className='my-2'>
           My name is Red. I am an AWS Certified, Full Stack Software Engineer currently based in
           Spokane, WA. From web and mobile frontends to RESTful APIs and serverless backends, I am
@@ -20,10 +20,10 @@ function About() {
           <p> Expires Apr 2026</p>
           <p> Credential ID 4Y18RZF172E1QSG9</p>
         </div>
-        <h2 className='font-bold text-2xl mb-2'>Some of the things I know</h2>
-        <div className='grid grid-cols-4'>
-          <ul className='list-disc'>
-            <h3 className='font-bold text-lg '>Languages</h3>
+        <h2 className='font-bold text-xl lg:text-2xl mb-2'>Some of the things I know</h2>
+        <div className='grid grid-cols-2 gap-2 lg:grid-cols-4'>
+          <ul className='list-disc '>
+            <h3 className='font-bold lg:text-lg'>Languages</h3>
             <li className='mx-4'>JavaScript</li>
             <li className='mx-4'>TypeScript</li>
             <li className='mx-4'>Java</li>
@@ -36,7 +36,7 @@ function About() {
             <li className='mx-4'>...and more</li>
           </ul>
           <ul className='list-disc'>
-            <h3 className='font-bold text-lg'>Tools</h3>
+            <h3 className='font-bold lg:text-lg'>Tools</h3>
             <li className='mx-4'>React</li>
             <li className='mx-4'>React Native</li>
             <li className='mx-4'>Redux</li>
@@ -49,7 +49,7 @@ function About() {
             <li className='mx-4'>...and more</li>
           </ul>
           <ul className='list-disc'>
-            <h3 className='font-bold text-lg'>AWS</h3>
+            <h3 className='font-bold lg:text-lg'>AWS</h3>
             <li className='mx-4'>DynamoDB</li>
             <li className='mx-4'>API Gateway</li>
             <li className='mx-4'>S3</li>
@@ -62,7 +62,7 @@ function About() {
             <li className='mx-4'>...and more</li>
           </ul>
           <ul className='list-disc'>
-            <h3 className='font-bold text-lg '>Testing</h3>
+            <h3 className='font-bold lg:text-lg '>Testing</h3>
             <li className='mx-4'>Jest</li>
             <li className='mx-4'>JUnit</li>
             <li className='mx-4'>Vitest</li>
