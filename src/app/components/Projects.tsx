@@ -31,8 +31,8 @@ function Projects() {
   const [selectedProject, setSelectedProject] = useState(projects[0]);
 
   return (
-    <section className='py-12 grid lg:grid-cols-3 grid-cols-1  gap-12'>
-      <div className='rounded-3xl col-span-1 lg:col-span-2  h-[450px] lg:h-[512px] w-full p-6 lg:p-0 relative flex items-center justify-center'>
+    <section className='py-6 lg:py-12 grid lg:grid-cols-3 grid-cols-1 lg:gap-12'>
+      <div className='rounded-3xl col-span-1 lg:col-span-2 lg:order-1 order-2 h-[450px] lg:h-[512px] w-full p-6 lg:p-0 relative flex items-center justify-center'>
         <video
           autoPlay
           muted
@@ -50,8 +50,8 @@ function Projects() {
           />
         </div>
       </div>
-      <div className='flex flex-col  w-full'>
-        <h1 className='font-bold text-5xl lg:text-6xl'>Projects</h1>
+      <div className='flex flex-col order-1 lg:order-2 w-full'>
+        <h1 className='font-bold text-4xl lg:text-5xl'>Projects</h1>
         <ul className='m-4 list-disc'>
           <li
             className={`${
@@ -77,10 +77,10 @@ function Projects() {
           </li>
         </ul>
         <div className='my-4 flex-1 flex flex-col'>
-          <h2 className='font-bold text-3xl lg:text-4xl'>{selectedProject.name}</h2>
-          <p className='py-2'>{selectedProject.description}</p>
+          <h2 className='font-bold text-2xl lg:text-3xl'>{selectedProject.name}</h2>
+          <p className=''>{selectedProject.description}</p>
           <p className='text-xs py-2'>Technologies: {selectedProject.technologies}</p>
-          <a href='https://github.com/redoral' target='_blank' className='underline text-sm'>
+          <a href='https://github.com/redoral' target='_blank' className='underline text-sm py-2'>
             View my GitHub repositories
           </a>
         </div>
