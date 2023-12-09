@@ -1,4 +1,5 @@
 import About from './components/About';
+import Projects from './components/Projects';
 
 export default function Home() {
   return (
@@ -11,10 +12,10 @@ export default function Home() {
             <button>About</button>
           </li>
           <li className='float-left'>
-            <button>Projects</button>
+            <button>Experience</button>
           </li>
           <li className='float-left'>
-            <button>Socials</button>
+            <button>Projects</button>
           </li>
         </ul>
       </nav>
@@ -36,7 +37,7 @@ export default function Home() {
       <section className='py-6'>
         <div className='col-span-2'>
           <h1 className='font-bold text-5xl'>Professional experience</h1>
-          <p className='my-2'>Places I have worked at and what I have worked as</p>
+          <p className='my-2'>Three of my most recent work experience</p>
         </div>
         <ol className='relative border-l border-gray-200 dark:border-neutral-600 mt-2'>
           <li className='mb-5 ml-4'>
@@ -81,6 +82,8 @@ export default function Home() {
           </li>
         </ol>
       </section>
+      {/** PROJECTS */}
+      <Projects />
     </main>
   );
 }
