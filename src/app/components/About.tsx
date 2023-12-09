@@ -3,7 +3,7 @@ import { FaAws } from 'react-icons/fa';
 
 function About() {
   return (
-    <section className='lg:py-12 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6'>
+    <section className='lg:py-12 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6' id='about'>
       <div
         className={`w-full order-2 lg:order-1 lg:h-full h-96 flex rounded-3xl bg-cover bg-center bg-[url('/img/about.jpeg')] flex-col p-12 items-center justify-center bg-no-repeat`}
       />

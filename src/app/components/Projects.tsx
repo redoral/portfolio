@@ -33,7 +33,7 @@ function Projects() {
   const [selectedProject, setSelectedProject] = useState(projects[0]);
 
   return (
-    <section className='py-6 lg:py-12 grid lg:grid-cols-3 grid-cols-1 lg:gap-12'>
+    <section className='py-6 lg:py-12 grid lg:grid-cols-3 grid-cols-1 lg:gap-12' id='projects'>
       <div className='rounded-3xl col-span-1 lg:col-span-2 lg:order-1 order-2 h-[450px] lg:h-[512px] w-full p-6 lg:p-0 relative flex items-center justify-center'>
         <video
           autoPlay

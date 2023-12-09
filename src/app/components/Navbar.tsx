@@ -6,13 +6,13 @@ function Navbar() {
       <h1 className='text-2xl font-bold'>redoral</h1>
       <ul className='space-x-6 lg:text-base text-sm'>
         <li className='float-left'>
-          <button>About</button>
+          <a href='#about'>About</a>
         </li>
         <li className='float-left'>
-          <button>Experience</button>
+          <a href='#experience'>Experience</a>
         </li>
         <li className='float-left'>
-          <button>Projects</button>
+          <a href='#projects'>Projects</a>
         </li>
       </ul>
     </nav>

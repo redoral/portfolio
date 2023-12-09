@@ -2,7 +2,7 @@ import React from 'react';
 
 function Experience() {
   return (
-    <section className='py-6'>
+    <section className='py-6' id='experience'>
       <div className='col-span-2'>
         <h1 className='font-bold text-4xl lg:text-5xl'>Professional experience</h1>
         <p className='my-2'>Three of my most recent work experience</p>
