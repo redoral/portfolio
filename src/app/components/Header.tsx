@@ -4,7 +4,7 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 function Header() {
   return (
     <header
-      className={`w-full bg-center lg:bg-[center_-30rem] lg:h-[512px] h-96 rounded-3xl bg-cover bg-[url('/header.jpeg')] flex flex-col lg:p-12 items-center justify-center bg-no-repeat`}>
+      className={`w-full bg-center lg:bg-[center_-30rem] lg:h-[512px] h-96 rounded-3xl bg-cover bg-[url('/img/header.webp')] flex flex-col lg:p-12 items-center justify-center bg-no-repeat`}>
       <h1 className='lg:text-xl text-sm text-neutral-100 lg:ml-[50px] mr-[200px] lg:self-start md:mr-[250px] lg:mr-[450px]'>
         Full Stack
       </h1>

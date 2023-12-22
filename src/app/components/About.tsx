@@ -1,11 +1,16 @@
+import Image from 'next/image';
 import React from 'react';
 import { FaAws } from 'react-icons/fa';
 
 function About() {
   return (
     <section className='lg:py-12 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6' id='about'>
-      <div
-        className={`w-full order-2 lg:order-1 lg:h-full h-96 flex rounded-3xl bg-cover bg-center bg-[url('/img/about.jpeg')] flex-col p-12 items-center justify-center bg-no-repeat`}
+      <Image
+        alt='A portrait of Red'
+        width={640}
+        height={850}
+        src={'/img/about.webp'}
+        className={`order-2 lg:order-1 rounded-3xl`}
       />
       <div className='lg:col-span-2 lg:order-2 order-1'>
         <h1 className='font-bold lg:text-5xl text-4xl'>A little bit about me</h1>
