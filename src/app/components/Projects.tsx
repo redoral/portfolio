@@ -18,14 +18,14 @@ function Projects() {
         'A platform made to help diversity-owned businesses match with other businesses to create a more inclusive economy.',
       technologies:
         'React, TypeScript, Vite, Apollo GraphQL, TailwindCSS, Vitest, RTL, Serverless, AWS',
-      image: '/img/supplierdiversity.png',
+      image: '/img/supplierdiversity.webp',
       size: 400
     },
     {
       name: 'Perfect Personnel Placement',
       description: 'A mobile, serverless training planner app.',
       technologies: 'React, React Native, TypeScript, Redux, AWS',
-      image: '/img/p3.jpg',
+      image: '/img/p3.webp',
       size: 220
     }
   ];
@@ -40,7 +40,7 @@ function Projects() {
           muted
           loop
           className='absolute z-[-1] overflow-hidden h-full w-full rounded-3xl object-cover'>
-          <source src='./projectbg.mp4' type='video/webm' />
+          <source src='./video/projectbg.mp4' type='video/webm' />
         </video>
         <div>
           <Image
