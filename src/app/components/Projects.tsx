@@ -40,7 +40,7 @@ function Projects() {
           muted
           loop
           className='absolute z-[-1] overflow-hidden h-full w-full rounded-3xl object-cover'>
-          <source src='./video/projectbg.mp4' type='video/webm' />
+          <source src='./video/projectbg.webm' type='video/webm' />
         </video>
         <div>
           <Image
