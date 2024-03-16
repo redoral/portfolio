@@ -36,7 +36,32 @@ function Projects() {
   return (
     <section className='py-6' id='projects'>
       <h1 className='font-bold text-4xl lg:text-5xl'>Some things I worked on</h1>
-      <p>Work in progress</p>
+      <p className='my-2'>Projects from my professional work</p>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 my-4 gap-6 dark:text-neutral-100 text-neutral-900'>
+        <div className='flex w-full h-96 bg-[url("/img/dxdc.webp")] bg-cover rounded-xl'>
+          <div className='h-28 self-end p-4 bg-neutral-100/50 dark:bg-neutral-800/50 w-full backdrop-blur-lg rounded-b-xl'>
+            <h2 className='font-bold'>Avista Digital Exchange</h2>
+            <h3 className='text-sm'>Developer, Data Capture Service</h3>
+            <p className='dark:text-neutral-300 text-xs py-2'>TypeScript, React</p>
+          </div>
+        </div>
+        <div className='flex w-full h-96 bg-[url("/img/supplierdiversity.webp")] bg-cover rounded-xl'>
+          <div className='h-28 self-end p-4 bg-neutral-100/50 dark:bg-neutral-800/50 w-full backdrop-blur-lg rounded-b-xl'>
+            <h2 className='font-bold'>Developer, Avista Supplier Diversity</h2>
+            <h3 className='text-sm'>Frontend</h3>
+            <p className='dark:text-neutral-300 text-xs py-2'>TypeScript, React</p>
+          </div>
+        </div>
+        <div className='flex w-full h-96 bg-[url("/img/p3.webp")] bg-cover rounded-xl'>
+          <div className='h-28 self-end p-4 bg-neutral-100/50 dark:bg-neutral-800/50 w-full backdrop-blur-lg rounded-b-xl'>
+            <h2 className='font-bold'>Perfect Personnel Placement</h2>
+            <h3 className='text-sm'>Architect and Developer, Frontend</h3>
+            <p className='dark:text-neutral-300 text-neutral-500 text-xs py-2'>
+              TypeScript, React Native
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

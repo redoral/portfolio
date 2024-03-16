@@ -11,8 +11,8 @@ function Header() {
       </h1>
       <a
         href='#about'
-        className='flex justify-between items-center py-4 px-4 w-48 bg-neutral-100 text-neutral-900 rounded text-xs my-6 hover:opacity-75 transition-opacity'>
-        View more <FaLongArrowAltRight />
+        className='flex justify-between items-center py-4 px-4 w-48 bg-neutral-300/50 backdrop-blur-md font-bold border border-neutral-300 text-neutral-300 rounded text-xs my-6 hover:opacity-75 transition-opacity'>
+        View more <FaLongArrowAltRight size={18} />
       </a>
     </header>
   );

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { FaAws, FaDownload, FaBullseye } from 'react-icons/fa';
+import { FaAws, FaBullseye } from 'react-icons/fa';
 
 function About() {
   return (
@@ -21,7 +21,7 @@ function About() {
           I do.
         </p>
 
-        <div className='p-2 border dark:border-neutral-800 flex justify-between items-center gap-4 rounded text-xs my-4'>
+        <div className='p-2 border dark:bg-neutral-800/50 backdrop-blur-md dark:border-neutral-800 flex justify-between items-center gap-4 rounded text-xs my-4'>
           <span>
             <h1 className='text-lg font-bold'>AWS Associate Developer</h1>
             <p> Issued Apr 2023</p>
@@ -30,12 +30,12 @@ function About() {
           </span>
           <FaAws size={32} className='mx-4' />
         </div>
-        <div className='p-2 border flex dark:border-neutral-800 justify-between items-center gap-4 rounded text-xs my-4'>
+        <div className='p-2 border flex dark:bg-neutral-800/50 backdrop-blur-md dark:border-neutral-800 justify-between items-center gap-4 rounded text-xs my-4'>
           <span>
             <h1 className='text-lg font-bold'>Skills Highlights</h1>
-            <p>TypeScript, Java, React, AWS, Spring Boot, Jest, and more!</p>
+            <p>TypeScript, Java, React, AWS, Spring Boot, Jest, and more</p>
           </span>
-          <FaBullseye size={32} className='mx-4' />
+          <FaBullseye size={24} className='mx-4' />
         </div>
       </div>
     </section>
