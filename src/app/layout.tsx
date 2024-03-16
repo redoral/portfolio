@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Hedvig_Letters_Serif } from 'next/font/google';
+import { Podkova } from 'next/font/google';
 import './globals.css';
 
-const inter = Hedvig_Letters_Serif({ subsets: ['latin'] });
+const inter = Podkova({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Red Oral',
+  title: 'Red Oral (WIP)',
   description: 'I am a full stack software engineer and this is my personal website.'
 };
 

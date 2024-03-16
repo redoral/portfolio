@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { FaAws } from 'react-icons/fa';
+import { FaAws, FaDownload, FaBullseye } from 'react-icons/fa';
 
 function About() {
   return (
@@ -9,7 +9,7 @@ function About() {
         alt='A portrait of Red'
         width={640}
         height={850}
-        src={'/img/about.webp'}
+        src={'/img/me.jpg'}
         className={`order-2 lg:order-1 rounded-3xl`}
       />
       <div className='lg:col-span-2 lg:order-2 order-1'>
@@ -20,6 +20,11 @@ function About() {
           experienced in a magnitude of development languages, tools, and processes. And I love what
           I do.
         </p>
+        <button
+          disabled
+          className='p-2 w-48 bg-neutral-400 cursor-not-allowed rounded text-white text-sm flex justify-between items-center'>
+          Download resume <FaDownload />
+        </button>
         <div className='p-2 border flex justify-between items-center gap-4 rounded text-xs my-4'>
           <span>
             <h1 className='text-lg font-bold'>AWS Associate Developer</h1>
@@ -29,55 +34,12 @@ function About() {
           </span>
           <FaAws size={32} className='mx-4' />
         </div>
-        <h2 className='font-bold text-xl lg:text-2xl mb-2'>Some of the things I know</h2>
-        <div className='grid grid-cols-2 gap-2 md:grid-cols-4'>
-          <ul className='list-disc '>
-            <h3 className='font-bold lg:text-lg'>Languages</h3>
-            <li className='mx-4'>JavaScript</li>
-            <li className='mx-4'>TypeScript</li>
-            <li className='mx-4'>Java</li>
-            <li className='mx-4'>HTML</li>
-            <li className='mx-4'>CSS</li>
-            <li className='mx-4'>PHP</li>
-            <li className='mx-4'>GraphQL</li>
-            <li className='mx-4'>SQL</li>
-            <li className='mx-4'>NoSQL</li>
-            <li className='mx-4'>...and more</li>
-          </ul>
-          <ul className='list-disc'>
-            <h3 className='font-bold lg:text-lg'>Tools</h3>
-            <li className='mx-4'>React</li>
-            <li className='mx-4'>React Native</li>
-            <li className='mx-4'>Redux</li>
-            <li className='mx-4'>Tailwind</li>
-            <li className='mx-4'>GraphQL</li>
-            <li className='mx-4'>Spring Boot</li>
-            <li className='mx-4'>Express.js</li>
-            <li className='mx-4'>MySQL</li>
-            <li className='mx-4'>PostgreSQL</li>
-            <li className='mx-4'>...and more</li>
-          </ul>
-          <ul className='list-disc'>
-            <h3 className='font-bold lg:text-lg'>AWS</h3>
-            <li className='mx-4'>DynamoDB</li>
-            <li className='mx-4'>API Gateway</li>
-            <li className='mx-4'>S3</li>
-            <li className='mx-4'>Lambda</li>
-            <li className='mx-4'>EC2</li>
-            <li className='mx-4'>Cognito</li>
-            <li className='mx-4'>CloudFormation</li>
-            <li className='mx-4'>CodePipeline</li>
-            <li className='mx-4'>SAM</li>
-            <li className='mx-4'>...and more</li>
-          </ul>
-          <ul className='list-disc'>
-            <h3 className='font-bold lg:text-lg '>Testing</h3>
-            <li className='mx-4'>Jest</li>
-            <li className='mx-4'>JUnit</li>
-            <li className='mx-4'>Vitest</li>
-            <li className='mx-4'>Enzyme</li>
-            <li className='mx-4'>React Testing Library</li>
-          </ul>
+        <div className='p-2 border flex justify-between items-center gap-4 rounded text-xs my-4'>
+          <span>
+            <h1 className='text-lg font-bold'>Skills Highlights</h1>
+            <p>TypeScript, Java, React, AWS, Spring Boot, Jest, and more!</p>
+          </span>
+          <FaBullseye size={32} className='mx-4' />
         </div>
       </div>
     </section>
