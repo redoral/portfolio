@@ -4,7 +4,7 @@ import { FaAws, FaDownload, FaBullseye } from 'react-icons/fa';
 
 function About() {
   return (
-    <section className='lg:py-12 py-6 grid grid-cols-1 lg:grid-cols-3 gap-6' id='about'>
+    <section className='pb-6 pt-12 grid grid-cols-1 lg:grid-cols-3 gap-6' id='about'>
       <Image
         alt='A portrait of Red'
         width={640}
@@ -20,12 +20,8 @@ function About() {
           experienced in a magnitude of development languages, tools, and processes. And I love what
           I do.
         </p>
-        <button
-          disabled
-          className='p-2 w-48 bg-neutral-400 cursor-not-allowed rounded text-white text-sm flex justify-between items-center'>
-          Download resume <FaDownload />
-        </button>
-        <div className='p-2 border flex justify-between items-center gap-4 rounded text-xs my-4'>
+
+        <div className='p-2 border dark:border-neutral-800 flex justify-between items-center gap-4 rounded text-xs my-4'>
           <span>
             <h1 className='text-lg font-bold'>AWS Associate Developer</h1>
             <p> Issued Apr 2023</p>
@@ -34,7 +30,7 @@ function About() {
           </span>
           <FaAws size={32} className='mx-4' />
         </div>
-        <div className='p-2 border flex justify-between items-center gap-4 rounded text-xs my-4'>
+        <div className='p-2 border flex dark:border-neutral-800 justify-between items-center gap-4 rounded text-xs my-4'>
           <span>
             <h1 className='text-lg font-bold'>Skills Highlights</h1>
             <p>TypeScript, Java, React, AWS, Spring Boot, Jest, and more!</p>
