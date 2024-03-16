@@ -1,6 +1,9 @@
 'use client';
 import Image from 'next/image';
 import React, { useState } from 'react';
+import dxdc from '../../../public/img/dxdc.webp';
+import supplierdiversity from '../../../public/img/supplierdiversity.webp';
+import p3 from '../../../public/img/p3.webp';
 
 function Projects() {
   const projects = [
@@ -9,7 +12,7 @@ function Projects() {
       description: 'A service used to capture and visualize microgrid simulation data.',
       technologies:
         'React, TypeScript, Vite, Apollo GraphQL, TailwindCSS, Apache E-Charts, Vitest, RTL',
-      image: '/img/dxdc.webp',
+      image: dxdc,
       size: 600
     },
     {
@@ -18,14 +21,14 @@ function Projects() {
         'A platform made to help diversity-owned businesses match with other businesses to create a more inclusive economy.',
       technologies:
         'React, TypeScript, Vite, Apollo GraphQL, TailwindCSS, Vitest, RTL, Serverless, AWS',
-      image: '/img/supplierdiversity.webp',
+      image: supplierdiversity,
       size: 400
     },
     {
       name: 'Perfect Personnel Placement',
       description: 'A mobile, serverless training planner app.',
       technologies: 'React, React Native, TypeScript, Redux, AWS',
-      image: '/img/p3.webp',
+      image: p3,
       size: 220
     }
   ];
@@ -46,6 +49,7 @@ function Projects() {
           <Image
             src={selectedProject.image}
             alt={`A screenshot of the ${selectedProject.name} project.`}
+            placeholder='blur'
             width={selectedProject.size}
             height={selectedProject.size}
             className='rounded-3xl'
