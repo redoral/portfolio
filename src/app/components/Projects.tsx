@@ -47,8 +47,8 @@ function Projects() {
         </div>
         <div className='flex w-full h-96 bg-[url("/img/supplierdiversity.webp")] bg-cover rounded-xl'>
           <div className='h-28 self-end p-4 bg-neutral-100/50 dark:bg-neutral-800/50 w-full backdrop-blur-lg rounded-b-xl'>
-            <h2 className='font-bold'>Developer, Avista Supplier Diversity</h2>
-            <h3 className='text-sm'>Frontend</h3>
+            <h2 className='font-bold'>Avista Supplier Diversity</h2>
+            <h3 className='text-sm'>Developer, Frontend</h3>
             <p className='dark:text-neutral-300 text-xs py-2'>TypeScript, React</p>
           </div>
         </div>

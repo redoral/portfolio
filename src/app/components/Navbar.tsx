@@ -26,7 +26,10 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <button onClick={() => localStorage.setItem('theme', 'dark')}>
+        <button
+          disabled
+          className='cursor-not-allowed'
+          onClick={() => localStorage.setItem('theme', 'dark')}>
           <LuSunMoon size={24} />
         </button>
       </div>
