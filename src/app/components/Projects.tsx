@@ -33,62 +33,33 @@ function Projects() {
     }
   ];
 
-  const [selectedProject, setSelectedProject] = useState(projects[0]);
-
   return (
-    <section className='py-6 lg:py-12 grid lg:grid-cols-3 grid-cols-1 lg:gap-12' id='projects'>
-      <div className='rounded-3xl col-span-1 lg:col-span-2 lg:order-1 order-2 h-[450px] lg:h-[512px] w-full p-6 lg:p-0 relative flex items-center justify-center'>
-        <video
-          autoPlay
-          muted
-          loop
-          className='absolute z-[-1] overflow-hidden h-full w-full rounded-3xl object-cover'>
-          <source src='./video/projectbg.webm' type='video/webm' />
-        </video>
-        <div>
-          <Image
-            src={selectedProject.image}
-            alt={`A screenshot of the ${selectedProject.name} project.`}
-            placeholder='blur'
-            width={selectedProject.size}
-            height={selectedProject.size}
-            className='rounded-3xl'
-          />
+    <section className='py-6' id='projects'>
+      <h1 className='font-bold text-4xl lg:text-5xl'>Some things I worked on</h1>
+      <p className='my-2'>Projects from my professional work</p>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 my-4 gap-6 dark:text-neutral-100 text-neutral-900'>
+        <div className='flex w-full h-96 bg-[url("/img/dxdc.webp")] bg-cover rounded-xl'>
+          <div className='h-28 self-end p-4 bg-neutral-100/50 dark:bg-neutral-800/50 w-full backdrop-blur-lg rounded-b-xl'>
+            <h2 className='font-bold'>Avista Digital Exchange</h2>
+            <h3 className='text-sm'>Developer, Data Capture Service</h3>
+            <p className='dark:text-neutral-300 text-xs py-2'>TypeScript, React</p>
+          </div>
         </div>
-      </div>
-      <div className='flex flex-col order-1 lg:order-2 w-full'>
-        <h1 className='font-bold text-4xl lg:text-5xl'>Some of my work</h1>
-        <ul className='m-4 list-disc'>
-          <li
-            className={`${
-              selectedProject.name === 'Avista Digital Exchange' ? 'font-bold' : 'font-normal'
-            }  `}>
-            <button onClick={() => setSelectedProject(projects[0])}>Avista Digital Exchange</button>
-          </li>
-          <li
-            className={`${
-              selectedProject.name === 'Avista Supplier Diversity' ? 'font-bold' : 'font-normal'
-            } `}>
-            <button onClick={() => setSelectedProject(projects[1])}>
-              Avista Supplier Diversity
-            </button>
-          </li>
-          <li
-            className={`${
-              selectedProject.name === 'Perfect Personnel Placement' ? 'font-bold' : 'font-normal'
-            } `}>
-            <button onClick={() => setSelectedProject(projects[2])}>
-              Perfect Personnel Placement
-            </button>
-          </li>
-        </ul>
-        <div className='my-4 flex-1 flex flex-col'>
-          <h2 className='font-bold text-2xl lg:text-3xl'>{selectedProject.name}</h2>
-          <p className=''>{selectedProject.description}</p>
-          <p className='text-xs py-2'>Technologies: {selectedProject.technologies}</p>
-          <a href='https://github.com/redoral' target='_blank' className='underline text-sm py-2'>
-            View my GitHub repositories
-          </a>
+        <div className='flex w-full h-96 bg-[url("/img/supplierdiversity.webp")] bg-cover rounded-xl'>
+          <div className='h-28 self-end p-4 bg-neutral-100/50 dark:bg-neutral-800/50 w-full backdrop-blur-lg rounded-b-xl'>
+            <h2 className='font-bold'>Avista Supplier Diversity</h2>
+            <h3 className='text-sm'>Developer, Frontend</h3>
+            <p className='dark:text-neutral-300 text-xs py-2'>TypeScript, React</p>
+          </div>
+        </div>
+        <div className='flex w-full h-96 bg-[url("/img/p3.webp")] bg-cover rounded-xl'>
+          <div className='h-28 self-end p-4 bg-neutral-100/50 dark:bg-neutral-800/50 w-full backdrop-blur-lg rounded-b-xl'>
+            <h2 className='font-bold'>Perfect Personnel Placement</h2>
+            <h3 className='text-sm'>Architect and Developer, Frontend</h3>
+            <p className='dark:text-neutral-300 text-neutral-500 text-xs py-2'>
+              TypeScript, React Native
+            </p>
+          </div>
         </div>
       </div>
     </section>
