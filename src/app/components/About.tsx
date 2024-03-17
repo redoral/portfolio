@@ -20,7 +20,6 @@ function About() {
           experienced in a magnitude of development languages, tools, and processes. And I love what
           I do.
         </p>
-
         <div className='p-2 border dark:bg-neutral-800/50 backdrop-blur-md dark:border-neutral-800 flex justify-between items-center gap-4 rounded text-xs my-4'>
           <span>
             <h1 className='text-lg font-bold'>AWS Associate Developer</h1>
