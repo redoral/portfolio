@@ -29,9 +29,12 @@ function HomePage({ stats }: { stats: number }) {
             <FaGithub />
             <p>{stats} GitHub repositories</p>
           </a>
-          <a href='https://github.com/redoral' target='_blank' className='flex items-center gap-2'>
+          <a
+            href='https://linkedin.com/in/redoral'
+            target='_blank'
+            className='flex items-center gap-2'>
             <FaLinkedin />
-            <p>396 LinkedIn connections</p>
+            <p>393 LinkedIn connections</p>
           </a>
           <a
             href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
