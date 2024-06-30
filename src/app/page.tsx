@@ -1,21 +1,17 @@
-import About from './components/About';
-import Experience from './components/Experience';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import Projects from './components/Projects';
+import { Metadata } from 'next';
+import HomePage from './components/home-page';
 
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <main className='flex min-h-screen flex-col lg:w-[1024px] lg:m-auto lg:p-0 pt-28 lg:pt-28 px-8 text-neutral-600 dark:text-neutral-100'>
-        <Header />
-        <About />
-        <Experience />
-        <Projects />
-        <Footer />
-      </main>
-    </>
-  );
+export const metadata: Metadata = {
+  title: 'Red Oral'
+};
+
+async function getStats() {
+  const githubStats = await fetch('https://api.github.com/users/redoral/repos');
+  return githubStats.json();
+}
+
+export default async function Page() {
+  const stats = await getStats();
+
+  return <HomePage stats={stats.length} />;
 }
