@@ -4,10 +4,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'i.gifer.com'
-      }
-    ]
-  }
+        hostname: 'i.gifer.com',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

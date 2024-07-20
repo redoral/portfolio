@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import HomePage from './components/home-page';
+import Home from './components/Home';
 
 export const metadata: Metadata = {
-  title: 'Red Oral'
+  title: 'Red Oral',
 };
 
 async function getStats() {
@@ -13,5 +13,5 @@ async function getStats() {
 export default async function Page() {
   const stats = await getStats();
 
-  return <HomePage stats={stats.length} />;
+  return <Home stats={stats.length} />;
 }
