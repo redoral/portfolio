@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Sen } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import './globals.css';
+import PageLayout from './components/PageLayout';
 
 const inter = Sen({ subsets: ['latin'] });
 
@@ -15,7 +16,7 @@ export default function RootLayout({ children }: { readonly children: React.Reac
     <html lang='en' className={`scroll-smooth`}>
       <body className={`${inter.className} dark bg-neutral-100 dark:bg-neutral-900 dark:text-white`}>
         <NextTopLoader />
-        {children}
+        <PageLayout>{children}</PageLayout>
       </body>
     </html>
   );
