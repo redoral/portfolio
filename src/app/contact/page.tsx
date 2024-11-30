@@ -1,9 +1,8 @@
 import React from 'react';
-import PageLayout from '../components/PageLayout';
 
 export default async function Page() {
   return (
-    <PageLayout>
+    <div className='col-span-1 flex w-full flex-col gap-4 pb-12 lg:col-span-3'>
       <h1 className='text-4xl font-bold'>Contact</h1>
       <p className='text-gray-300'>Currently not taking emails, texts, or calls.</p>
       <p className='text-gray-300'>
@@ -13,6 +12,6 @@ export default async function Page() {
         </a>
         .
       </p>
-    </PageLayout>
+    </div>
   );
 }

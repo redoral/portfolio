@@ -2,11 +2,10 @@
 import Image from 'next/image';
 import React from 'react';
 import { FaGithub, FaLinkedin, FaArrowTrendUp, FaAws } from 'react-icons/fa6';
-import PageLayout from './PageLayout';
 
 function Home({ stats }: { stats: number }) {
   return (
-    <PageLayout>
+    <div className='col-span-1 flex w-full flex-col gap-4 pb-12 lg:col-span-3'>
       <h1 className='text-4xl font-bold'>Red Oral</h1>
       <p className='max-w-96 text-gray-300'>
         Hi, I&apos;m Red. I&apos;m currently a <b className='text-white'>Software Engineer II</b> at{' '}
@@ -44,8 +43,8 @@ function Home({ stats }: { stats: number }) {
       </div>
       <div className='flex flex-col gap-6'>
         <p className='text-gray-300'>
-          I am an AWS Certified, Full Stack Software Engineer with a multitude of technical skills. From mobile & web
-          apps to REST APIs & serverless backends, I am experienced in a magnitude of development tools and processes.
+          I am a Full Stack Software Engineer with a multitude of technical skills. From mobile & web apps to REST APIs
+          & serverless backends, I am experienced in a magnitude of development tools and processes.
         </p>
         <p className='text-gray-300'>
           I have worked on internal apps, grocery, and microgrid simulation frontends with React and React Native, as
@@ -66,7 +65,7 @@ function Home({ stats }: { stats: number }) {
           </a>
         </span>
       </div>
-    </PageLayout>
+    </div>
   );
 }
 
