@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { FiHome, FiMail } from 'react-icons/fi';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
@@ -17,17 +17,22 @@ function MobileNavMenu() {
     setIsMenuOpen(false);
   }
 
-  function closeMenuOnOutsideClick(event: any) {
-    if (
-      isMenuOpen &&
-      !navDropdownMenu.current?.contains(event.target) &&
-      !navDropdownButton.current?.contains(event.target)
-    ) {
-      setIsMenuOpen(false);
-    }
-  }
+  const closeMenuOnOutsideClick = useCallback(
+    (event: any) => {
+      if (
+        isMenuOpen &&
+        !navDropdownMenu.current?.contains(event.target) &&
+        !navDropdownButton.current?.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    },
+    [isMenuOpen, navDropdownButton, navDropdownMenu]
+  );
 
-  document.addEventListener('mousedown', closeMenuOnOutsideClick);
+  useEffect(() => {
+    window?.addEventListener('mousedown', closeMenuOnOutsideClick);
+  }, [closeMenuOnOutsideClick]);
 
   return (
     <nav className='col-span-1 flex items-center justify-between gap-12 lg:hidden'>
