@@ -1,11 +1,12 @@
 'use client';
 import Image from 'next/image';
 import React from 'react';
-import { FaGithub, FaLinkedin, FaArrowTrendUp, FaAws } from 'react-icons/fa6';
+import { FaGithub, FaArrowTrendUp, FaAws } from 'react-icons/fa6';
+import Projects from './Projects';
 
 function Home({ stats }: { stats: number }) {
   return (
-    <div className='col-span-1 flex w-full flex-col gap-4 pb-12 lg:col-span-3'>
+    <div className='col-span-1 flex w-full flex-col gap-4 lg:col-span-3'>
       <h1 className='text-4xl font-bold'>Red Oral</h1>
       <p className='max-w-96 text-gray-300'>
         Hi, I&apos;m Red. I&apos;m currently a <b className='text-white'>Software Engineer II</b> at{' '}
@@ -31,14 +32,6 @@ function Home({ stats }: { stats: number }) {
             <FaGithub />
             <p>{stats} GitHub repositories</p>
           </a>
-          <a
-            href='https://linkedin.com/in/redoral'
-            target='_blank'
-            className='flex items-center gap-2 transition-colors hover:text-white'
-          >
-            <FaLinkedin />
-            <p>394 LinkedIn connections</p>
-          </a>
         </div>
       </div>
       <div className='flex flex-col gap-6'>
@@ -47,8 +40,8 @@ function Home({ stats }: { stats: number }) {
           & serverless backends, I am experienced in a magnitude of development tools and processes.
         </p>
         <p className='text-gray-300'>
-          I have worked on internal apps, grocery, and microgrid simulation frontends with React and React Native, as
-          well as backend applications with AWS, Spring Boot, and Apollo GraphQL.
+          Professionally, I have worked on internal apps, grocery, and microgrid simulation frontends with React and
+          React Native, as well as backend applications with AWS, Spring Boot, and Apollo GraphQL.
         </p>
       </div>
       <div className='my-6 flex flex-col gap-2 text-sm text-gray-300 lg:flex-row lg:gap-6'>
@@ -65,6 +58,7 @@ function Home({ stats }: { stats: number }) {
           </a>
         </span>
       </div>
+      <Projects />
     </div>
   );
 }
