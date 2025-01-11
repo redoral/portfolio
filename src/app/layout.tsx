@@ -7,8 +7,9 @@ import PageLayout from './components/PageLayout';
 const inter = Sen({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Red Oral',
-  description: 'Full stack software engineer.',
+  title: 'Red Oral - Full Stack Software Engineer',
+  description:
+    'Full Stack Software Engineer with a multitude of technical skills. From mobile & web apps to REST APIs & serverless backends, I am experienced in a magnitude of development tools and processes.',
 };
 
 export default function RootLayout({ children }: { readonly children: React.ReactNode }) {
