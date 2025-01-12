@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { FaX } from 'react-icons/fa6';
 import { FiHome, FiMail } from 'react-icons/fi';
 import { RxHamburgerMenu } from 'react-icons/rx';
 
 function MobileNavMenu() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
   const navDropdownButton = useRef<HTMLButtonElement>(null);
   const navDropdownMenu = useRef<HTMLDivElement>(null);
 
@@ -51,10 +52,17 @@ function MobileNavMenu() {
         <RxHamburgerMenu size={24} />
       </button>
       <div
-        className={`${isMenuOpen ? 'absolute' : 'hidden'} right-12 top-32 w-fit rounded border border-white border-opacity-15 bg-black p-6 transition-opacity`}
+        className={`${isMenuOpen ? 'h-[200px]' : 'h-[0px] p-0'} fixed bottom-0 left-0 w-screen rounded border border-white border-opacity-15 bg-black p-6 transition-all`}
         ref={navDropdownMenu}
       >
-        <ul className='flex flex-col gap-6 text-gray-300'>
+        <span className='flex items-center justify-between'>
+          <h1 className='text-lg font-bold'>Go to</h1>
+          <button className='text-gray-300 transition-all hover:text-white' onClick={closeMenu}>
+            <FaX />
+          </button>
+        </span>
+
+        <ul className='my-6 flex flex-col gap-8 text-gray-300'>
           <li>
             <Link href='/' className='flex items-center gap-4 hover:opacity-50 active:text-white' onClick={closeMenu}>
               <FiHome /> Home
