@@ -1,10 +1,11 @@
+import React from 'react';
 import { FaDocker, FaGhost, FaKeyboard } from 'react-icons/fa6';
-import Project from './Project';
+import Project from '@/app/components/project';
 
 function Projects() {
   return (
     <div className='grid gap-4'>
-      <h1 className='text-2xl font-bold'>Projects</h1>
+      <h2 className='text-2xl font-bold'>Projects</h2>
       <p className='max-w-96 text-gray-300'>A preview of some of my personal work on GitHub.</p>
       <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
         <Project

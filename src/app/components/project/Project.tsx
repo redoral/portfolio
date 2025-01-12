@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { FaGithub } from 'react-icons/fa6';
 
 type ProjectProps = {
@@ -16,7 +16,7 @@ function Project({ name, description, repository, backgroundColor, borderColor, 
     <div className='flex flex-col overflow-hidden rounded border border-white border-opacity-15 bg-black'>
       <div className={`flex items-center justify-center ${backgroundColor} bg-opacity-10 p-6 ${textColor}`}>{icon}</div>
       <div className='flex flex-col gap-2 border-t border-white border-opacity-15 p-6'>
-        <h2 className='w-40 truncate text-xl font-bold'>{name}</h2>
+        <h2 className='w-40 truncate text-lg font-bold'>{name}</h2>
         <p className='min-h-32 text-sm text-gray-300'>{description}</p>
         <div className='mt-6'>
           <a
