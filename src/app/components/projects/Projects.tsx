@@ -4,10 +4,10 @@ import Project from '@/app/components/project';
 
 function Projects() {
   return (
-    <div className='grid gap-4'>
+    <div className='grid gap-6 py-6'>
       <h2 className='text-2xl font-bold'>Projects</h2>
       <p className='max-w-96 text-gray-300'>A preview of some of my personal work on GitHub.</p>
-      <div className='grid grid-cols-1 gap-4 md:grid-cols-3'>
+      <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
         <Project
           name='pihole-unbound-docker'
           description='Quick start docker compose to deploy PiHole and Unbound to your local server.'
