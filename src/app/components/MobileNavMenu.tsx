@@ -52,7 +52,7 @@ function MobileNavMenu() {
         <RxHamburgerMenu size={24} />
       </button>
       <div
-        className={`${isMenuOpen ? 'h-[200px] p-6 opacity-100' : 'h-[0px] p-0 opacity-0'} fixed bottom-0 left-0 w-screen rounded border border-white border-opacity-15 bg-black transition-all`}
+        className={`${isMenuOpen ? 'h-[200px] opacity-100' : 'h-[0px] opacity-0'} fixed bottom-0 left-0 w-screen rounded border-t border-white border-opacity-15 bg-black p-6 transition-all`}
         ref={navDropdownMenu}
       >
         <span className='flex items-center justify-between'>

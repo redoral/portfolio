@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { TbError404Off } from 'react-icons/tb';
 
@@ -7,13 +8,9 @@ function NotFoundPage() {
       <h1 className='text-4xl font-bold'>Not found</h1>
       <TbError404Off className='my-12 text-red-300' size={128} />
       <p>The page you are looking for does not exist.</p>
-      <a
-        href='https://linkedin.com/in/redoral'
-        target='_blank'
-        className='underline transition-colors hover:text-white'
-      >
+      <Link href='/' className='underline transition-colors hover:text-white'>
         Return home
-      </a>
+      </Link>
     </div>
   );
 }
