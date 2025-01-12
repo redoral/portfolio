@@ -36,7 +36,7 @@ function MobileNav() {
   }, [closeMenuOnOutsideClick]);
 
   return (
-    <nav className='flex items-center gap-4 lg:hidden'>
+    <nav className='flex items-center gap-2 lg:hidden'>
       <button
         onClick={toggleMenu}
         ref={navDropdownButton}

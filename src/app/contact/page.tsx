@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   return (
-    <div>
+    <>
       <MdOutlinePhoneDisabled className='my-12 text-red-300' size={128} />
       <p className='text-gray-300'>Currently not taking emails, texts, or calls.</p>
       <p className='text-gray-300'>
@@ -22,6 +22,6 @@ export default async function Page() {
         </a>
         .
       </p>
-    </div>
+    </>
   );
 }

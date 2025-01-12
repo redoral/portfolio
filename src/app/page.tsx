@@ -17,7 +17,7 @@ export default async function Page() {
   const stats = await getStats();
 
   return (
-    <div>
+    <>
       <p className='max-w-96 text-gray-300'>
         Hi, I&apos;m Red. I&apos;m currently a <b className='text-white'>Software Engineer II</b> at{' '}
         <b className='text-white'>Commerce Architects</b>.
@@ -53,7 +53,7 @@ export default async function Page() {
           React Native, as well as backend applications with AWS, Spring Boot, and Apollo GraphQL.
         </p>
       </div>
-      <div className='my-6 flex flex-col gap-2 text-sm text-gray-300 lg:flex-row lg:gap-6'>
+      <div className='flex flex-col gap-2 text-sm text-gray-300 lg:flex-row lg:gap-6'>
         <span className='flex items-center gap-2 transition-colors hover:text-white'>
           <FaArrowTrendUp />
           <a href='https://linkedin.com/in/redoral' target='_blank'>
@@ -68,6 +68,6 @@ export default async function Page() {
         </span>
       </div>
       <Projects />
-    </div>
+    </>
   );
 }
