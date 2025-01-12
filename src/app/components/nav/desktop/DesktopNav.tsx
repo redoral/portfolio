@@ -1,13 +1,14 @@
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FiHome, FiMail } from 'react-icons/fi';
 
-function DesktopNavMenu() {
+function DesktopNav() {
   const pathname = usePathname();
 
   return (
-    <nav className='col-span-1 hidden flex-col items-start justify-start gap-12 lg:flex'>
+    <nav className='hidden flex-col items-start justify-start gap-12 lg:flex'>
       <Image
         src='/img/logos/logo.png'
         width={64}
@@ -35,4 +36,4 @@ function DesktopNavMenu() {
   );
 }
 
-export default DesktopNavMenu;
+export default DesktopNav;

@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FaX } from 'react-icons/fa6';
 import { FiHome, FiMail } from 'react-icons/fi';
 import { RxHamburgerMenu } from 'react-icons/rx';
+import Image from 'next/image';
+import Link from 'next/link';
 
-function MobileNavMenu() {
+function MobileNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navDropdownButton = useRef<HTMLButtonElement>(null);
   const navDropdownMenu = useRef<HTMLDivElement>(null);
@@ -36,21 +36,22 @@ function MobileNavMenu() {
   }, [closeMenuOnOutsideClick]);
 
   return (
-    <nav className='col-span-1 flex items-center justify-between gap-12 lg:hidden'>
-      <Image
-        src='/img/logos/logo.png'
-        width={48}
-        height={48}
-        alt='Site logo'
-        className='m-2 rounded border border-white border-opacity-15'
-      />
+    <nav className='flex items-center gap-4 lg:hidden'>
       <button
         onClick={toggleMenu}
         ref={navDropdownButton}
-        className={`flex ${isMenuOpen ? 'rotate-90' : 'rotate-0'} text-gray-300 transition-all ease-in-out hover:opacity-50 active:opacity-100 lg:hidden`}
+        className={` ${isMenuOpen ? 'rotate-90' : 'rotate-0'} text-gray-300 transition-all ease-in-out hover:opacity-50 active:opacity-100 lg:hidden`}
       >
-        <RxHamburgerMenu size={24} />
+        <RxHamburgerMenu size={28} />
       </button>
+      <Image
+        src='/img/logos/logo.png'
+        width={36}
+        height={36}
+        alt='Site logo'
+        className='m-2 rounded border border-white border-opacity-15'
+      />
+
       <div
         className={`${isMenuOpen ? 'h-[200px] opacity-100' : 'h-[0px] opacity-0'} fixed bottom-0 left-0 w-screen rounded border-t border-white border-opacity-15 bg-black p-6 transition-all`}
         ref={navDropdownMenu}
@@ -83,4 +84,4 @@ function MobileNavMenu() {
   );
 }
 
-export default MobileNavMenu;
+export default MobileNav;
