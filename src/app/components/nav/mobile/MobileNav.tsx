@@ -49,11 +49,11 @@ function MobileNav() {
         width={36}
         height={36}
         alt='Site logo'
-        className='m-2 rounded border border-white border-opacity-15'
+        className='m-2 rounded border border-neutral-800'
       />
 
       <div
-        className={`${isMenuOpen ? 'h-[200px] opacity-100' : 'h-[0px] opacity-0'} fixed bottom-0 left-0 w-screen rounded border-t border-white border-opacity-15 bg-black p-6 transition-all`}
+        className={`${isMenuOpen ? 'h-[200px] opacity-100' : 'h-[0px] opacity-0'} fixed bottom-0 left-0 w-screen rounded border-t border-neutral-800 bg-black p-6 transition-all`}
         ref={navDropdownMenu}
       >
         <span className='flex items-center justify-between'>
