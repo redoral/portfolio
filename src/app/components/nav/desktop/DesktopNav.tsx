@@ -14,18 +14,18 @@ function DesktopNav() {
         width={64}
         height={64}
         alt='Site logo'
-        className='m-2 rounded border border-white border-opacity-15'
+        className='m-2 rounded border border-neutral-800'
       />
       <ul className='flex flex-col gap-4'>
         <li
-          className={`w-40 justify-center rounded border border-opacity-15 px-4 py-2 transition-all hover:text-white ${pathname === '/' ? 'border-white bg-black bg-opacity-100 font-semibold' : 'border-transparent text-gray-300'} text-md`}
+          className={`w-40 justify-center rounded border px-4 py-2 transition-all hover:text-white ${pathname === '/' ? 'border-white/15 bg-black font-semibold' : 'border-transparent text-gray-300'} text-md`}
         >
           <Link href='/' className='flex items-center gap-4'>
             <FiHome /> Home
           </Link>
         </li>
         <li
-          className={`w-40 rounded border border-opacity-15 px-4 py-2 transition-colors hover:text-white ${pathname === '/contact' ? 'border-white bg-black bg-opacity-100 font-semibold' : 'border-transparent text-gray-300'} text-md`}
+          className={`w-40 rounded border px-4 py-2 transition-colors hover:text-white ${pathname === '/contact' ? 'border-white/15 bg-black font-semibold' : 'border-transparent text-gray-300'} text-md`}
         >
           <Link href='/contact' className='flex items-center gap-4'>
             <FiMail /> Contact
