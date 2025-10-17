@@ -40,39 +40,36 @@ function MobileNav() {
       <button
         onClick={toggleMenu}
         ref={navDropdownButton}
-        className={` ${isMenuOpen ? 'rotate-90' : 'rotate-0'} text-gray-300 transition-all ease-in-out hover:opacity-50 active:opacity-100 lg:hidden`}
+        className={` ${isMenuOpen ? 'rotate-90' : 'rotate-0'} hover:text-kanagawa-red cursor-pointer active:opacity-100 lg:hidden`}
       >
         <RxHamburgerMenu size={28} />
       </button>
-      <Image
-        src='/img/logos/logo.png'
-        width={36}
-        height={36}
-        alt='Site logo'
-        className='m-2 rounded border border-neutral-800'
-      />
 
       <div
-        className={`${isMenuOpen ? 'h-[200px] opacity-100' : 'h-[0px] opacity-0'} fixed bottom-0 left-0 w-screen rounded border-t border-neutral-800 bg-black p-6 transition-all`}
+        className={`${isMenuOpen ? 'h-[200px] opacity-100' : 'h-[0px] opacity-0'} bg-kanagawa-black fixed bottom-0 left-0 w-screen rounded-t-4xl p-6 transition-all`}
         ref={navDropdownMenu}
       >
         <span className='flex items-center justify-between'>
           <h1 className='text-lg font-bold'>Go to</h1>
-          <button className='text-gray-300 transition-all hover:text-white' onClick={closeMenu}>
+          <button className='hover:text-kanagawa-red cursor-pointer' onClick={closeMenu}>
             <FaX />
           </button>
         </span>
 
-        <ul className='my-6 flex flex-col gap-8 text-gray-300'>
+        <ul className='my-6 flex flex-col gap-8'>
           <li>
-            <Link href='/' className='flex items-center gap-4 hover:opacity-50 active:text-white' onClick={closeMenu}>
+            <Link
+              href='/'
+              className='active:text-kanagawa-red hover:text-kanagawa-red flex items-center gap-4'
+              onClick={closeMenu}
+            >
               <FiHome /> Home
             </Link>
           </li>
           <li>
             <Link
               href='/contact'
-              className='flex items-center gap-4 hover:opacity-50 active:text-white'
+              className='active:text-kanagawa-red hover:text-kanagawa-red flex items-center gap-4'
               onClick={closeMenu}
             >
               <FiMail /> Contact

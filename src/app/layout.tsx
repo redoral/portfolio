@@ -17,10 +17,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { readonly children: React.ReactNode }) {
   return (
     <html lang='en' className='h-full'>
-      <body
-        className={`${inter.className} dark flex h-full flex-col bg-neutral-100 dark:bg-neutral-950 dark:text-white`}
-      >
-        <NextTopLoader color='#ff6961' />
+      <body className={`${inter.className} dark bg-kanagawa-bg text-kanagawa-fg flex h-full flex-col`}>
+        <NextTopLoader color='#c4746e' />
         <PageLayout>{children}</PageLayout>
         <Footer />
       </body>
