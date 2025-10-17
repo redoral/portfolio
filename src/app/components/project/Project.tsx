@@ -13,7 +13,7 @@ type ProjectProps = {
 
 function Project({ name, description, repository, backgroundColor, borderColor, textColor, icon }: ProjectProps) {
   return (
-    <div className='border-kanagawa-black bg-kanagawa-black flex flex-col overflow-hidden rounded border'>
+    <div className='bg-kanagawa-black flex flex-col overflow-hidden rounded-xl'>
       <div className={`flex items-center justify-center ${backgroundColor} p-6 ${textColor}`}>{icon}</div>
       <div className='border-kanagawa-black flex flex-col gap-2 border-t p-6'>
         <h2 className='text-kanagawa-fg w-40 truncate text-lg font-bold'>{name}</h2>
@@ -22,7 +22,7 @@ function Project({ name, description, repository, backgroundColor, borderColor, 
           <a
             href={repository}
             target='_blank'
-            className={`flex w-fit items-center gap-2 overflow-hidden rounded border ${borderColor} ${backgroundColor} px-4 py-2 text-sm ${textColor} hover:text-kanagawa-fg transition-all`}
+            className={`flex w-fit items-center gap-2 overflow-hidden rounded-xl border ${borderColor} ${backgroundColor} px-4 py-2 text-sm ${textColor} hover:text-kanagawa-fg transition-all`}
           >
             <FaGithub /> Repository
           </a>
