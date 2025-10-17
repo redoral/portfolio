@@ -15,12 +15,12 @@ function PageLayout({ children }: { children: ReactNode }) {
   }
 
   return (
-    <div className='m-auto flex w-full max-w-screen-xl flex-1 flex-col gap-12 p-12 lg:grid-cols-4 lg:flex-row lg:gap-24 lg:p-24'>
+    <div className='m-auto flex w-full max-w-screen-lg flex-1 flex-col gap-12 p-12'>
       <MobileNav />
       <DesktopNav />
       <div>
         <header className='mb-6'>
-          <h1 className='text-3xl font-bold'>{getHeaderText()}</h1>
+          <h1 className='text-kanagawa-bright-white text-3xl font-bold'>{getHeaderText()}</h1>
         </header>
         <main>
           <div className='flex w-full flex-col gap-6'>{children}</div>

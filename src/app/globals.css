@@ -1,1 +1,35 @@
 @import 'tailwindcss';
+
+@theme {
+  /* Primary colors */
+  --color-kanagawa-bg: #181616;
+  --color-kanagawa-fg: #c5c9c5;
+
+  /* Normal colors */
+  --color-kanagawa-black: #0d0c0c;
+  --color-kanagawa-red: #c4746e;
+  --color-kanagawa-green: #8a9a7b;
+  --color-kanagawa-yellow: #c4b28a;
+  --color-kanagawa-blue: #8ba4b0;
+  --color-kanagawa-magenta: #a292a3;
+  --color-kanagawa-cyan: #8ea4a2;
+  --color-kanagawa-white: #c8c093;
+
+  /* Bright colors */
+  --color-kanagawa-bright-black: #a6a69c;
+  --color-kanagawa-bright-red: #e46876;
+  --color-kanagawa-bright-green: #87a987;
+  --color-kanagawa-bright-yellow: #e6c384;
+  --color-kanagawa-bright-blue: #7fb4ca;
+  --color-kanagawa-bright-magenta: #938aa9;
+  --color-kanagawa-bright-cyan: #7aa89f;
+  --color-kanagawa-bright-white: #c5c9c5;
+
+  /* Selection colors */
+  --color-kanagawa-selection-bg: #2d4f67;
+  --color-kanagawa-selection-fg: #c8c093;
+
+  /* Additional indexed colors */
+  --color-kanagawa-accent1: #b6927b;
+  --color-kanagawa-accent2: #b98d7b;
+}

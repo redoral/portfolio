@@ -9,9 +9,33 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        kanagawa: {
+          bg: 'var(--color-dragon-bg)',
+          fg: 'var(--color-dragon-fg)',
+          black: 'var(--color-dragon-black)',
+          red: 'var(--color-dragon-red)',
+          green: 'var(--color-dragon-green)',
+          yellow: 'var(--color-dragon-yellow)',
+          blue: 'var(--color-dragon-blue)',
+          magenta: 'var(--color-dragon-magenta)',
+          cyan: 'var(--color-dragon-cyan)',
+          white: 'var(--color-dragon-white)',
+          'bright-black': 'var(--color-dragon-bright-black)',
+          'bright-red': 'var(--color-dragon-bright-red)',
+          'bright-green': 'var(--color-dragon-bright-green)',
+          'bright-yellow': 'var(--color-dragon-bright-yellow)',
+          'bright-blue': 'var(--color-dragon-bright-blue)',
+          'bright-magenta': 'var(--color-dragon-bright-magenta)',
+          'bright-cyan': 'var(--color-dragon-bright-cyan)',
+          'bright-white': 'var(--color-dragon-bright-white)',
+          selection: {
+            bg: 'var(--color-dragon-selection-bg)',
+            fg: 'var(--color-dragon-selection-fg)',
+          },
+          accent1: 'var(--color-dragon-accent1)',
+          accent2: 'var(--color-dragon-accent2)',
+        },
       },
     },
   },
