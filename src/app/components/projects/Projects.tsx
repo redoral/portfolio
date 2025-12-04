@@ -4,7 +4,7 @@ import Project from '@/app/components/project';
 
 function Projects() {
   return (
-    <div className='grid gap-6 py-6'>
+    <section className='grid gap-6 py-6'>
       <h2 className='text-kanagawa-fg text-2xl font-bold'>Projects</h2>
       <p className='text-kanagawa-fg max-w-96'>A preview of some of my personal work on GitHub.</p>
       <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
@@ -36,7 +36,7 @@ function Projects() {
           icon={<FaGhost size={96} />}
         />
       </div>
-    </div>
+    </section>
   );
 }
 
