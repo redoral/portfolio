@@ -14,10 +14,6 @@ function MobileNav() {
     setIsMenuOpen((prev) => !prev);
   }
 
-  function closeMenu() {
-    setIsMenuOpen(false);
-  }
-
   return (
     <nav className='flex items-center gap-2 lg:hidden'>
       <button
@@ -35,7 +31,7 @@ function MobileNav() {
       >
         <span className='flex items-center justify-between'>
           <h1 className='text-lg font-bold'>Go to</h1>
-          <button className='hover:text-kanagawa-red cursor-pointer' onClick={closeMenu}>
+          <button className='hover:text-kanagawa-red cursor-pointer'>
             <FaX />
           </button>
         </span>
